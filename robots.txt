@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thedirtcalc.com/sitemap.xml
+Sitemap: https://beezilonka-bot.github.io/thedirtcalc/sitemap.xml
