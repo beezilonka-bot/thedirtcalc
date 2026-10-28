@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pea Gravel Calculator — Tons & Bags for Patios and Paths | TheDirtCalc</title>
+<meta name="description" content="Free pea gravel calculator. Get tons, cubic yards and bag counts for patios, walkways and drainage at pea gravel's true density of 96 lb per cubic foot.">
+<link rel="canonical" href="https://beezilonka-bot.github.io/thedirtcalc/pea-gravel-calculator.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How much does a cubic yard of pea gravel weigh?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "About 2,590 lb \u2014 1.30 tons \u2014 at 96 lb per cubic foot. Slightly less than crushed stone because the rounded pieces pack with more air gaps."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How deep should pea gravel be?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "About 2 inches for patios and walkways over a compacted base. Deeper feels unstable underfoot; shallower wears through to the base."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How many bags of pea gravel make a ton?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Standard pea gravel bags are about 0.5 cu ft and 48 lb, so roughly 42 bags per ton. One cubic yard is about 54 of those bags \u2014 bulk delivery territory."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much area does a ton of pea gravel cover?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "One ton is about 20.8 cu ft, covering roughly 125 sq ft at 2 inches deep, or 83 sq ft at 3 inches."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Pea gravel or crushed stone for a patio?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Pea gravel is kinder to bare feet and drains freely, but shifts; fine crushed stone (screenings) compacts into a firmer surface. Many patios use crushed stone as the base and pea gravel only as the visible top layer."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">The<span>Dirt</span>Calc</a>
+    <nav class="site-nav">
+      <a href="topsoil-calculator.html">Topsoil</a>
+      <a href="mulch-calculator.html">Mulch</a>
+      <a href="gravel-calculator.html">Gravel</a>
+      <a href="raised-bed-soil-calculator.html">Raised Beds</a>
+      <a href="bulk-vs-bagged-calculator.html">Bulk vs. Bagged</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Pea Gravel Calculator</h1>
+    <p class="lede">Pea gravel is lighter than crushed stone and sold by the ton or the bag. Enter your patio or path dimensions for cubic yards, tons and bag counts.</p>
+  </div>
+<section class="calc calc-root" data-mode="material" data-material-name="Pea gravel">
+  <div class="unit-toggle">
+    <span class="lbl">Units:</span>
+    <button type="button" class="unit-btn active" data-system="imperial">Feet / Inches</button>
+    <button type="button" class="unit-btn" data-system="metric">Meters / Centimeters</button>
+  </div>
+  <fieldset class="area" data-area>
+    <legend>Area 1</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="10">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="10">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="2">
+      </div>
+    </div>
+  </fieldset>
+  <label class="checkline"><input type="checkbox" class="add-area"> Add a second area (two beds, a patio plus a path, …)</label>
+  <fieldset class="area" data-area hidden>
+    <legend>Area 2</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="10">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="10">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="2">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="area">
+    <legend>Material density <span style="font-weight:400;font-size:.85rem">(adjust if your supplier quotes a different weight)</span></legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Density (lb per cu ft)</label>
+        <input class="d-lb" type="number" step="any" min="0" value="96">
+      </div>
+      <div class="field">
+        <label>Density (tons per cu yd)</label>
+        <input class="d-tons" type="number" step="any" min="0" value="1.296">
+      </div>
+    </div>
+    <p class="fineprint">Pea gravel — small, naturally rounded stones about ⅜ inch across — weighs about 96 lb per cubic foot, or 1.30 tons per cubic yard. The rounded shape leaves more air gaps than angular crushed stone (100 lb/cu ft), so a yard of pea gravel weighs a bit less and also shifts more underfoot, which matters for how deep you should lay it.</p>
+  </fieldset>
+  <div class="calc-actions"><button type="button" class="btn calc-btn">Calculate</button></div>
+  <div class="calc-error" role="alert"></div>
+  <div class="results">
+    <h3>Your results</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-area">0</span></div><div class="k">sq ft covered</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuft">0</span></div><div class="k">cubic feet</div></div>
+      <div class="result-box highlight"><div class="v"><span class="r-cuyd">0</span></div><div class="k">cubic yards</div></div>
+      <div class="result-box"><div class="v"><span class="r-tons">0</span></div><div class="k">tons (approx. weight)</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Recommended order — includes 10% extra for settling &amp; spills</h3>
+    <div class="result-grid">
+      <div class="result-box highlight"><div class="v"><span class="r-rec-cuyd">0</span></div><div class="k">cubic yards to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-tons">0</span></div><div class="k">tons to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Copy-ready shopping list</h3>
+    <textarea class="shop-list" readonly aria-label="Shopping list"></textarea>
+    <p><button type="button" class="btn secondary copy-btn">Copy shopping list</button><span class="copy-note"></span></p>
+  </div>
+</section>
+  <section>
+    <h2>How to calculate pea gravel</h2>
+    <p>Volume first: <strong>area × depth ÷ 27</strong> gives cubic yards; at 96 lb per cubic foot, each yard weighs about 1.30 tons. Depth is where pea gravel projects are won or lost. Because the stones are round and roll against each other, pea gravel needs a contained area — steel, stone or timber edging is not optional — and a moderate depth: <strong>2 inches</strong> is the sweet spot for patios and paths. Much deeper and it feels like walking on a beach; much shallower and the base shows through within a season.</p>
+    <p>Underneath matters as much as depth. Pea gravel laid directly on soil will mix into the mud and disappear within a year or two. The standard build is 2–3 inches of compacted crushed-stone base (use the gravel calculator for that layer), landscape fabric, then your 2 inches of pea gravel. If your project has both layers, the second-area option in this calculator can total the pea gravel while you run the base separately — or calculate each layer on its own page and add the receipts.</p>
+    <p>For small areas — a stepping-stone surround, a dog run corner, an AC pad — bags are convenient: a typical 0.5 cu ft bag holds about 48 lb of pea gravel, and this calculator's tonnage converts directly (one ton ≈ 42 of those bags). Past about half a ton, bulk delivery is normally cheaper per pound and saves dozens of bag trips; the recommended order adds 10% because pea gravel migrates out of edges and low spots appear quickly in the first season.</p>
+  </section>
+  <section class="example">
+    <h3>Worked example: 10 ft × 10 ft pea gravel patio, 2 inches deep</h3>
+    <p>A 10 ft × 10 ft patio is 100 sq ft. At 2 inches (0.167 ft) deep the volume is 100 × 0.167 = 16.67 cubic feet = <strong>0.62 cubic yards</strong>. At 96 lb per cubic foot that is 1,600 lb = <strong>0.80 tons</strong> of pea gravel. In 0.75 cu ft bags you would need 23 bags; with the 10% buffer, order about <strong>0.88 tons</strong> bulk (0.68 cu yd) or 25 bags. Remember this sits on top of a compacted base layer that is calculated separately.</p>
+  </section>
+  <section>
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Laying pea gravel deeper than 2–3 inches.</strong> Deep round gravel never firms up — chairs sink, feet roll, and walking feels unstable. Keep it near 2 inches over a solid base.</li>
+      <li><strong>Skipping the base and fabric.</strong> On bare soil, pea gravel churns into the dirt and vanishes. A compacted crushed base plus fabric is what makes the top layer last.</li>
+      <li><strong>No edging.</strong> Round stones travel. Without rigid edging your patio slowly migrates into the lawn and the calculated depth thins at the edges first.</li>
+      <li><strong>Using crushed-stone tonnage for pea gravel.</strong> The density difference is small per yard (about 0.05 tons) but across a 5-ton order it is a quarter-ton of over- or under-ordering. Use the right stone's numbers.</li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>How much does a cubic yard of pea gravel weigh?</h3>
+    <p>About 2,590 lb — 1.30 tons — at 96 lb per cubic foot. Slightly less than crushed stone because the rounded pieces pack with more air gaps.</p>
+    <h3>How deep should pea gravel be?</h3>
+    <p>About 2 inches for patios and walkways over a compacted base. Deeper feels unstable underfoot; shallower wears through to the base.</p>
+    <h3>How many bags of pea gravel make a ton?</h3>
+    <p>Standard pea gravel bags are about 0.5 cu ft and 48 lb, so roughly 42 bags per ton. One cubic yard is about 54 of those bags — bulk delivery territory.</p>
+    <h3>How much area does a ton of pea gravel cover?</h3>
+    <p>One ton is about 20.8 cu ft, covering roughly 125 sq ft at 2 inches deep, or 83 sq ft at 3 inches.</p>
+    <h3>Pea gravel or crushed stone for a patio?</h3>
+    <p>Pea gravel is kinder to bare feet and drains freely, but shifts; fine crushed stone (screenings) compacts into a firmer surface. Many patios use crushed stone as the base and pea gravel only as the visible top layer.</p>
+  </section>
+  <nav class="related">
+    <h2>Related calculators</h2>
+    <ul>
+      <li><a href="gravel-calculator.html">Gravel calculator</a></li>
+      <li><a href="river-rock-calculator.html">River rock calculator</a></li>
+      <li><a href="bulk-vs-bagged-calculator.html">Bulk vs. bagged calculator</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 TheDirtCalc. Estimates only — confirm quantities with your supplier before ordering.</div>
+    <nav>
+      <a href="index.html">All calculators</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/calc.js"></script>
+</body>
+</html>

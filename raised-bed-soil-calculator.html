@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raised Bed Soil Calculator — Fill Beds by the Bag or Yard | TheDirtCalc</title>
+<meta name="description" content="Free raised bed soil calculator. Enter bed size and depth to get cubic feet, cubic yards and bag counts — with one-tap presets for 4×4, 4×8 and other common beds.">
+<link rel="canonical" href="https://beezilonka-bot.github.io/thedirtcalc/raised-bed-soil-calculator.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How many bags of soil fill a 4\u00d78 raised bed?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A 4\u00d78 bed filled 12 inches deep holds 32 cu ft: about 22 bags at 1.5 cu ft, or 43 bags at 0.75 cu ft. At 8 inches deep it holds about 21 cu ft \u2014 roughly 15 bags at 1.5 cu ft."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much soil do I need for a 4\u00d74 bed?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "At 12 inches deep, 16 cu ft (about 11 bags of 1.5 cu ft). At 10 inches deep, about 13.3 cu ft. Use the 4\u00d74 preset above for exact numbers at your depth."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the best soil mix ratio for raised beds?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A common recipe is about 60% topsoil, 30% compost and 10% aeration material (perlite, coarse sand or fine bark). Pre-mixed \u201craised bed soil\u201d bags follow roughly this blend, which is what this calculator's density assumes."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Should I fill the whole bed with premium mix?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Roots feed mostly in the top 10\u201312 inches. For beds deeper than about 14 inches, filling the bottom with plain topsoil (calculated separately with the topsoil calculator) cuts cost without hurting plants."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How often do raised beds need topping up?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Expect to add \u00bd\u20131 inch of compost or mix each year as organic matter decomposes and the level drops. A 4\u00d78 bed needs about 2.7 cu ft \u2014 two 1.5 cu ft bags \u2014 per inch of top-up."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">The<span>Dirt</span>Calc</a>
+    <nav class="site-nav">
+      <a href="topsoil-calculator.html">Topsoil</a>
+      <a href="mulch-calculator.html">Mulch</a>
+      <a href="gravel-calculator.html">Gravel</a>
+      <a href="raised-bed-soil-calculator.html">Raised Beds</a>
+      <a href="bulk-vs-bagged-calculator.html">Bulk vs. Bagged</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Raised Bed Soil Calculator</h1>
+    <p class="lede">How much soil fills a raised bed? Enter the bed dimensions (or tap a standard size) to get cubic feet, yards and bag counts for your soil mix.</p>
+  </div>
+<section class="calc calc-root" data-mode="material" data-material-name="Raised bed soil mix">
+  <div class="unit-toggle">
+    <span class="lbl">Units:</span>
+    <button type="button" class="unit-btn active" data-system="imperial">Feet / Inches</button>
+    <button type="button" class="unit-btn" data-system="metric">Meters / Centimeters</button>
+  </div>
+  <div class="presets"><span class="lbl" style="font-weight:600;font-size:.95rem">Common sizes:</span><button type="button" data-l-ft="4" data-w-ft="4">4 ft × 4 ft</button><button type="button" data-l-ft="4" data-w-ft="8">4 ft × 8 ft</button><button type="button" data-l-ft="2" data-w-ft="8">2 ft × 8 ft</button><button type="button" data-l-ft="3" data-w-ft="6">3 ft × 6 ft</button></div>
+  <fieldset class="area" data-area>
+    <legend>Area 1</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="4">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="8">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="12">
+      </div>
+    </div>
+  </fieldset>
+  <label class="checkline"><input type="checkbox" class="add-area"> Add a second area (two beds, a patio plus a path, …)</label>
+  <fieldset class="area" data-area hidden>
+    <legend>Area 2</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="4">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="8">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="12">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="area">
+    <legend>Material density <span style="font-weight:400;font-size:.85rem">(adjust if your supplier quotes a different weight)</span></legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Density (lb per cu ft)</label>
+        <input class="d-lb" type="number" step="any" min="0" value="45">
+      </div>
+      <div class="field">
+        <label>Density (tons per cu yd)</label>
+        <input class="d-tons" type="number" step="any" min="0" value="0.608">
+      </div>
+    </div>
+    <p class="fineprint">Raised bed mixes (topsoil blended with compost and aeration material) are much lighter than plain soil: about 45 lb per cubic foot, roughly 0.61 tons per cubic yard when moist. Weight matters less here than volume — beds are usually filled by the bag or by the yard — but it helps to know a filled 4×8 bed holds well over half a ton of mix.</p>
+  </fieldset>
+  <div class="calc-actions"><button type="button" class="btn calc-btn">Calculate</button></div>
+  <div class="calc-error" role="alert"></div>
+  <div class="results">
+    <h3>Your results</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-area">0</span></div><div class="k">sq ft covered</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuft">0</span></div><div class="k">cubic feet</div></div>
+      <div class="result-box highlight"><div class="v"><span class="r-cuyd">0</span></div><div class="k">cubic yards</div></div>
+      <div class="result-box"><div class="v"><span class="r-tons">0</span></div><div class="k">tons (approx. weight)</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Recommended order — includes 10% extra for settling &amp; spills</h3>
+    <div class="result-grid">
+      <div class="result-box highlight"><div class="v"><span class="r-rec-cuyd">0</span></div><div class="k">cubic yards to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-tons">0</span></div><div class="k">tons to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Copy-ready shopping list</h3>
+    <textarea class="shop-list" readonly aria-label="Shopping list"></textarea>
+    <p><button type="button" class="btn secondary copy-btn">Copy shopping list</button><span class="copy-note"></span></p>
+  </div>
+</section>
+  <section>
+    <h2>How much soil does a raised bed hold?</h2>
+    <p>A raised bed is a simple box, so the math is the friendliest on this site: <strong>length × width × depth, all in feet, equals cubic feet</strong>. A standard 4 ft × 8 ft bed filled 12 inches deep holds 4 × 8 × 1 = 32 cubic feet — about 1.19 cubic yards. Enter the inside dimensions of the frame, not the outside, and measure depth to where you actually want the soil line, usually an inch or two below the rim to keep mulch and soil from washing over the edge.</p>
+    <p>Bag shopping is where beds surprise people. Soil mix is commonly sold in 1.5 cu ft bags, so that single 4×8 bed needs about 22 bags; two beds need 43. At typical big-box prices that is often two to three times the cost of a bulk yard of blended garden soil delivered. The crossover is roughly one cubic yard: below it, bags win on convenience; above it, bulk usually wins on price. The bulk vs. bagged calculator on this site will run your local numbers exactly.</p>
+    <p>Two practical adjustments are built into the recommendation. First, loose mix fluffs up in the bag and settles once watered — expect a freshly filled bed to drop an inch or more in the first weeks, which the 10% buffer covers. Second, deep beds (18 inches or more) do not need to be all premium mix: many gardeners fill the bottom third with plain topsoil or even coarse organic material and save the good mix for the top 10–12 inches where roots feed. Use the second-area option to calculate a deep bed's two layers separately if you go that route.</p>
+  </section>
+  <section class="example">
+    <h3>Worked example: two 4 ft × 8 ft beds, 12 inches deep</h3>
+    <p>Each 4 ft × 8 ft bed filled 12 inches (1 ft) deep holds 4 × 8 × 1 = 32 cubic feet. Two beds need 64 cubic feet = <strong>2.37 cubic yards</strong>. In 1.5 cu ft bags that is <strong>43 bags</strong> — a strong hint to price a bulk delivery of garden mix instead. The mix weighs about 64 × 45 = 2,880 lb (1.44 tons) total, which is also why you fill beds in place rather than moving them after. With the settling buffer, order about <strong>2.6 cubic yards</strong> in bulk or 48 bags.</p>
+  </section>
+  <section>
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Measuring the outside of the frame.</strong> Lumber thickness steals real volume — a “4×8” bed built from 2× lumber is closer to 3 ft 9 in × 7 ft 9 in inside. Small, but it adds up across several beds.</li>
+      <li><strong>Filling to the very rim.</strong> Soil at rim level washes out with the first heavy watering. Leave 1–2 inches of headroom; your depth entry should match the soil line, not the frame height.</li>
+      <li><strong>Buying bagged mix for a whole garden of beds.</strong> Past about one cubic yard total, bulk blended soil is usually dramatically cheaper per cubic foot — and produces a lot less plastic waste.</li>
+      <li><strong>Ignoring settling.</strong> Fresh mix can settle 10% or more after a few waterings. The buffer in this calculator exists so your beds do not end the season under-filled.</li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>How many bags of soil fill a 4×8 raised bed?</h3>
+    <p>A 4×8 bed filled 12 inches deep holds 32 cu ft: about 22 bags at 1.5 cu ft, or 43 bags at 0.75 cu ft. At 8 inches deep it holds about 21 cu ft — roughly 15 bags at 1.5 cu ft.</p>
+    <h3>How much soil do I need for a 4×4 bed?</h3>
+    <p>At 12 inches deep, 16 cu ft (about 11 bags of 1.5 cu ft). At 10 inches deep, about 13.3 cu ft. Use the 4×4 preset above for exact numbers at your depth.</p>
+    <h3>What is the best soil mix ratio for raised beds?</h3>
+    <p>A common recipe is about 60% topsoil, 30% compost and 10% aeration material (perlite, coarse sand or fine bark). Pre-mixed “raised bed soil” bags follow roughly this blend, which is what this calculator's density assumes.</p>
+    <h3>Should I fill the whole bed with premium mix?</h3>
+    <p>Roots feed mostly in the top 10–12 inches. For beds deeper than about 14 inches, filling the bottom with plain topsoil (calculated separately with the topsoil calculator) cuts cost without hurting plants.</p>
+    <h3>How often do raised beds need topping up?</h3>
+    <p>Expect to add ½–1 inch of compost or mix each year as organic matter decomposes and the level drops. A 4×8 bed needs about 2.7 cu ft — two 1.5 cu ft bags — per inch of top-up.</p>
+  </section>
+  <nav class="related">
+    <h2>Related calculators</h2>
+    <ul>
+      <li><a href="topsoil-calculator.html">Topsoil calculator</a></li>
+      <li><a href="compost-calculator.html">Compost calculator</a></li>
+      <li><a href="bulk-vs-bagged-calculator.html">Bulk vs. bagged calculator</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 TheDirtCalc. Estimates only — confirm quantities with your supplier before ordering.</div>
+    <nav>
+      <a href="index.html">All calculators</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/calc.js"></script>
+</body>
+</html>

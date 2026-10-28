@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mulch Calculator — Cubic Yards & Bags for Beds | TheDirtCalc</title>
+<meta name="description" content="Free mulch calculator. Get cubic yards and bag counts for flower beds and tree rings from length, width and depth — including the 3-inch depth most beds actually need.">
+<link rel="canonical" href="https://beezilonka-bot.github.io/thedirtcalc/mulch-calculator.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How many bags of mulch are in a cubic yard?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It depends on bag size: 36 bags at 0.75 cu ft, 18 bags at 1.5 cu ft, or 13.5 bags at 2 cu ft make one cubic yard (27 cu ft)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How deep should mulch be?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Three inches for most beds, 2\u20134 inches around trees, and about 4 inches for a brand-new bed over bare soil or a dedicated weed-suppression layer over landscape fabric."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much area does one bag of mulch cover?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A 1.5 cu ft bag covers about 6 sq ft at 3 inches deep, or 9 sq ft at 2 inches. A 2 cu ft bag covers about 8 sq ft at 3 inches."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is bulk mulch cheaper than bagged?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Usually, past roughly 2 cubic yards \u2014 but delivery fees change the answer for small loads. Run your local prices through the bulk vs. bagged calculator on this site for an exact comparison."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much does a cubic yard of mulch weigh?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Roughly 400\u2013800 lb depending on material and moisture \u2014 about 675 lb at the 25 lb/cu ft average this calculator uses. Much lighter than soil or stone, which is why a yard of mulch in a pickup is reasonable while a yard of topsoil often is not."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">The<span>Dirt</span>Calc</a>
+    <nav class="site-nav">
+      <a href="topsoil-calculator.html">Topsoil</a>
+      <a href="mulch-calculator.html">Mulch</a>
+      <a href="gravel-calculator.html">Gravel</a>
+      <a href="raised-bed-soil-calculator.html">Raised Beds</a>
+      <a href="bulk-vs-bagged-calculator.html">Bulk vs. Bagged</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Mulch Calculator</h1>
+    <p class="lede">How many bags — or how many yards — of mulch do your beds need? Enter the area and depth to get cubic yards, tons and bag counts for 0.75 and 1.5 cu ft bags.</p>
+  </div>
+<section class="calc calc-root" data-mode="material" data-material-name="Mulch">
+  <div class="unit-toggle">
+    <span class="lbl">Units:</span>
+    <button type="button" class="unit-btn active" data-system="imperial">Feet / Inches</button>
+    <button type="button" class="unit-btn" data-system="metric">Meters / Centimeters</button>
+  </div>
+  <fieldset class="area" data-area>
+    <legend>Area 1</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="24">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="4">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="3">
+      </div>
+    </div>
+  </fieldset>
+  <label class="checkline"><input type="checkbox" class="add-area"> Add a second area (two beds, a patio plus a path, …)</label>
+  <fieldset class="area" data-area hidden>
+    <legend>Area 2</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="24">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="4">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="3">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="area">
+    <legend>Material density <span style="font-weight:400;font-size:.85rem">(adjust if your supplier quotes a different weight)</span></legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Density (lb per cu ft)</label>
+        <input class="d-lb" type="number" step="any" min="0" value="25">
+      </div>
+      <div class="field">
+        <label>Density (tons per cu yd)</label>
+        <input class="d-tons" type="number" step="any" min="0" value="0.338">
+      </div>
+    </div>
+    <p class="fineprint">Shredded wood and bark mulch is light: about 25 lb per cubic foot, or roughly 0.34 tons (675 lb) per cubic yard. Weight varies a lot with moisture and material — pine bark nuggets are lighter, wet shredded hardwood heavier. Mulch is normally bought by volume, so treat the tonnage here as a hauling estimate, not an ordering unit.</p>
+  </fieldset>
+  <div class="calc-actions"><button type="button" class="btn calc-btn">Calculate</button></div>
+  <div class="calc-error" role="alert"></div>
+  <div class="results">
+    <h3>Your results</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-area">0</span></div><div class="k">sq ft covered</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuft">0</span></div><div class="k">cubic feet</div></div>
+      <div class="result-box highlight"><div class="v"><span class="r-cuyd">0</span></div><div class="k">cubic yards</div></div>
+      <div class="result-box"><div class="v"><span class="r-tons">0</span></div><div class="k">tons (approx. weight)</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Recommended order — includes 10% extra for settling &amp; spills</h3>
+    <div class="result-grid">
+      <div class="result-box highlight"><div class="v"><span class="r-rec-cuyd">0</span></div><div class="k">cubic yards to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-tons">0</span></div><div class="k">tons to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Copy-ready shopping list</h3>
+    <textarea class="shop-list" readonly aria-label="Shopping list"></textarea>
+    <p><button type="button" class="btn secondary copy-btn">Copy shopping list</button><span class="copy-note"></span></p>
+  </div>
+</section>
+  <section>
+    <h2>How to calculate mulch</h2>
+    <p>The math is the same as for any ground cover: <strong>volume = area × depth</strong>, then convert cubic feet to cubic yards by dividing by 27. The part people get wrong is depth. For most flower and shrub beds, <strong>3 inches</strong> is the working standard: enough to suppress weeds and hold moisture, not so much that it suffocates roots or piles up against siding and trunks. Around trees, 2–4 inches in a wide ring (kept a few inches away from the trunk) is right; new beds over bare soil can take 4 inches the first year.</p>
+    <p>Bag math is where mulch shopping gets confusing, because bag sizes differ. One cubic yard equals 27 cubic feet, so it takes 36 bags of 0.75 cu ft, 18 bags of 1.5 cu ft, or about 14 bags of 2 cu ft to make a yard. This calculator shows the two most common sizes side by side. As a rule of thumb, once a project passes about 2 cubic yards — roughly 36 of the 1.5 cu ft bags — bulk delivery is usually cheaper and far less plastic to throw away; our bulk vs. bagged calculator runs the exact numbers for your local prices.</p>
+    <p>Mulch also shrinks. Fresh shredded mulch settles and decomposes, losing visible depth over a season, which is why the recommended order here adds 10%. If you are topping up existing mulch rather than starting bare, measure what is already there and only add the difference — a bed with 1½ inches down needs 1½ inches more, not a full 3.</p>
+  </section>
+  <section class="example">
+    <h3>Worked example: 24 ft × 4 ft flower bed, 3 inches deep</h3>
+    <p>A 24 ft × 4 ft bed covers 96 sq ft. At 3 inches (0.25 ft) deep, the volume is 96 × 0.25 = 24 cubic feet, or <strong>0.89 cubic yards</strong>. That is exactly <strong>16 bags of 1.5 cu ft</strong> (24 ÷ 1.5), or 32 bags of 0.75 cu ft. The mulch itself weighs only about 600 lb, so bags are easy to handle for a job this size. With the 10% settling buffer, buy 18 bags — or round a bulk order to 1 full yard.</p>
+  </section>
+  <section>
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Mulching 2 inches deep to save money.</strong> Thin mulch lets light reach weed seeds and dries out fast. You end up re-mulching mid-season and spending more, not less.</li>
+      <li><strong>Piling mulch against trunks and siding.</strong> “Volcano mulching” traps moisture against bark and invites rot and pests. Keep mulch 3–6 inches away from trunks and below the top of your foundation.</li>
+      <li><strong>Comparing bag prices without checking bag size.</strong> A $3 bag at 0.75 cu ft costs more per yard than a $4.50 bag at 2 cu ft. Always compare price per cubic foot.</li>
+      <li><strong>Ordering for bare ground when topping up.</strong> Measure existing depth first. Topping up usually needs half the volume of a fresh bed.</li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>How many bags of mulch are in a cubic yard?</h3>
+    <p>It depends on bag size: 36 bags at 0.75 cu ft, 18 bags at 1.5 cu ft, or 13.5 bags at 2 cu ft make one cubic yard (27 cu ft).</p>
+    <h3>How deep should mulch be?</h3>
+    <p>Three inches for most beds, 2–4 inches around trees, and about 4 inches for a brand-new bed over bare soil or a dedicated weed-suppression layer over landscape fabric.</p>
+    <h3>How much area does one bag of mulch cover?</h3>
+    <p>A 1.5 cu ft bag covers about 6 sq ft at 3 inches deep, or 9 sq ft at 2 inches. A 2 cu ft bag covers about 8 sq ft at 3 inches.</p>
+    <h3>Is bulk mulch cheaper than bagged?</h3>
+    <p>Usually, past roughly 2 cubic yards — but delivery fees change the answer for small loads. Run your local prices through the bulk vs. bagged calculator on this site for an exact comparison.</p>
+    <h3>How much does a cubic yard of mulch weigh?</h3>
+    <p>Roughly 400–800 lb depending on material and moisture — about 675 lb at the 25 lb/cu ft average this calculator uses. Much lighter than soil or stone, which is why a yard of mulch in a pickup is reasonable while a yard of topsoil often is not.</p>
+  </section>
+  <nav class="related">
+    <h2>Related calculators</h2>
+    <ul>
+      <li><a href="topsoil-calculator.html">Topsoil calculator</a></li>
+      <li><a href="compost-calculator.html">Compost calculator</a></li>
+      <li><a href="bulk-vs-bagged-calculator.html">Bulk vs. bagged calculator</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 TheDirtCalc. Estimates only — confirm quantities with your supplier before ordering.</div>
+    <nav>
+      <a href="index.html">All calculators</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/calc.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sand Calculator — Tons & Bags for Patios, Pavers & Sandboxes | TheDirtCalc</title>
+<meta name="description" content="Free sand calculator. Get tons and bag counts for paver bases, sandboxes, pools and leveling — dry sand at 100 lb per cubic foot, with a 10% buffer.">
+<link rel="canonical" href="https://beezilonka-bot.github.io/thedirtcalc/sand-calculator.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How many 50 lb bags of sand make a ton?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Exactly 40 bags by weight. By volume, a 50 lb bag of dry sand is about 0.5 cu ft, so one cubic yard (27 cu ft) is roughly 54 bags \u2014 which is why bulk wins quickly."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much sand do I need under pavers?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "About 1 inch of bedding sand over the compacted base. For a 100 sq ft patio that is 8.3 cu ft \u2248 0.31 cu yd \u2248 0.42 tons."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much sand does a sandbox need?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It depends on fill depth: a 4\u00d74 ft box at 6 inches takes 8 cu ft (about 16 \u00d7 50 lb bags); a 6\u00d76 at 6 inches takes 18 cu ft (about 36 bags). Use the calculator with your box size and a 4\u20138 inch depth."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What kind of sand should I buy?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Play sand (washed, screened) for sandboxes; mason sand for pool bases and general leveling; coarse concrete sand for paver bedding; polymeric sand for paver joints. Density is similar for all of them, so this calculator works for each."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much does a cubic yard of sand weigh?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "About 2,700 lb (1.35 tons) dry. Wet sand can exceed 3,000 lb per yard \u2014 one more reason a \u201cton\u201d is not a fixed volume."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">The<span>Dirt</span>Calc</a>
+    <nav class="site-nav">
+      <a href="topsoil-calculator.html">Topsoil</a>
+      <a href="mulch-calculator.html">Mulch</a>
+      <a href="gravel-calculator.html">Gravel</a>
+      <a href="raised-bed-soil-calculator.html">Raised Beds</a>
+      <a href="bulk-vs-bagged-calculator.html">Bulk vs. Bagged</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Sand Calculator</h1>
+    <p class="lede">Sand for a paver base, a sandbox or under a pool is sold by the ton and by the bag. Enter area and depth to get cubic yards, tons and bag counts.</p>
+  </div>
+<section class="calc calc-root" data-mode="material" data-material-name="Sand">
+  <div class="unit-toggle">
+    <span class="lbl">Units:</span>
+    <button type="button" class="unit-btn active" data-system="imperial">Feet / Inches</button>
+    <button type="button" class="unit-btn" data-system="metric">Meters / Centimeters</button>
+  </div>
+  <fieldset class="area" data-area>
+    <legend>Area 1</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="6">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="6">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="6">
+      </div>
+    </div>
+  </fieldset>
+  <label class="checkline"><input type="checkbox" class="add-area"> Add a second area (two beds, a patio plus a path, …)</label>
+  <fieldset class="area" data-area hidden>
+    <legend>Area 2</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="6">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="6">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="6">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="area">
+    <legend>Material density <span style="font-weight:400;font-size:.85rem">(adjust if your supplier quotes a different weight)</span></legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Density (lb per cu ft)</label>
+        <input class="d-lb" type="number" step="any" min="0" value="100">
+      </div>
+      <div class="field">
+        <label>Density (tons per cu yd)</label>
+        <input class="d-tons" type="number" step="any" min="0" value="1.350">
+      </div>
+    </div>
+    <p class="fineprint">Dry sand weighs about 100 lb per cubic foot — 1.35 tons per cubic yard, the same as crushed stone. Wet sand can be 15–25% heavier, which is why a “ton” of damp sand covers noticeably less area. Play sand, mason sand and paver sand all sit close to this density; what differs is grain size and washing, not weight.</p>
+  </fieldset>
+  <div class="calc-actions"><button type="button" class="btn calc-btn">Calculate</button></div>
+  <div class="calc-error" role="alert"></div>
+  <div class="results">
+    <h3>Your results</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-area">0</span></div><div class="k">sq ft covered</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuft">0</span></div><div class="k">cubic feet</div></div>
+      <div class="result-box highlight"><div class="v"><span class="r-cuyd">0</span></div><div class="k">cubic yards</div></div>
+      <div class="result-box"><div class="v"><span class="r-tons">0</span></div><div class="k">tons (approx. weight)</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Recommended order — includes 10% extra for settling &amp; spills</h3>
+    <div class="result-grid">
+      <div class="result-box highlight"><div class="v"><span class="r-rec-cuyd">0</span></div><div class="k">cubic yards to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-tons">0</span></div><div class="k">tons to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Copy-ready shopping list</h3>
+    <textarea class="shop-list" readonly aria-label="Shopping list"></textarea>
+    <p><button type="button" class="btn secondary copy-btn">Copy shopping list</button><span class="copy-note"></span></p>
+  </div>
+</section>
+  <section>
+    <h2>How to calculate sand</h2>
+    <p>The formula never changes: <strong>area × depth, divided by 27</strong> for cubic yards, then multiply cubic feet by about 100 lb to get weight in tons. What changes between projects is the depth. A paver patio wants about <strong>1 inch</strong> of bedding sand over a compacted gravel base. A sandbox is usually filled 4–8 inches deep (roughly half the box height, so sand stays in the box). Under an above-ground pool, 2–3 inches of mason sand makes the leveling layer. Leveling a low lawn area takes ¼–½ inch of topdressing sand worked into the grass.</p>
+    <p>For bag math, remember that hardware-store sand is often sold by weight, not volume: the standard 50 lb bag holds about 0.5 cubic feet. This calculator reports bag counts for the 0.75 and 1.5 cu ft sizes used by bagged soil and aggregate brands, and the tonnage lets you convert to 50 lb bags directly — one ton is forty 50 lb bags. Anything beyond a sandbox or a small paver project is almost always cheaper and easier as a bulk ton from a landscape yard.</p>
+    <p>Sand also compacts and migrates. Bedding sand gets screeded and then settles into the gravel and the paver joints; sandbox sand escapes on shoes and through drainage. The recommended figure adds 10%, and for paver joints specifically, plan a small extra bag of jointing sand for the top-up pass a few weeks after installation.</p>
+  </section>
+  <section class="example">
+    <h3>Worked example: 6 ft × 6 ft sandbox, 6 inches deep</h3>
+    <p>A 6 ft × 6 ft sandbox filled 6 inches (0.5 ft) deep needs 36 × 0.5 = 18 cubic feet of sand = <strong>0.67 cubic yards</strong>. At 100 lb per cubic foot that is 1,800 lb, or <strong>0.90 tons</strong> — about <strong>36 standard 50 lb bags</strong> of play sand. That is a manageable bag job; compare with the same sandbox at 8 inches deep (1.2 tons, 48 bags) before deciding to fill it to the brim.</p>
+  </section>
+  <section>
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Filling a sandbox to the top.</strong> Sand at rim height leaves on shoes and wind within weeks. Half to two-thirds full is the practical fill line — and much cheaper.</li>
+      <li><strong>Using bedding sand at base depth.</strong> Paver bedding sand is a 1-inch leveling layer, not a structural base. The 4–6 inches underneath should be compacted gravel; sand alone will shift and the pavers will rock.</li>
+      <li><strong>Buying wet sand by the ton for a volume job.</strong> You pay for the water. If the pile at the yard is soaked, expect up to a fifth less coverage per ton than the calculator shows.</li>
+      <li><strong>Forgetting joint sand on paver jobs.</strong> Bedding sand and jointing (polymeric) sand are different products with different jobs. Budget for both.</li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>How many 50 lb bags of sand make a ton?</h3>
+    <p>Exactly 40 bags by weight. By volume, a 50 lb bag of dry sand is about 0.5 cu ft, so one cubic yard (27 cu ft) is roughly 54 bags — which is why bulk wins quickly.</p>
+    <h3>How much sand do I need under pavers?</h3>
+    <p>About 1 inch of bedding sand over the compacted base. For a 100 sq ft patio that is 8.3 cu ft ≈ 0.31 cu yd ≈ 0.42 tons.</p>
+    <h3>How much sand does a sandbox need?</h3>
+    <p>It depends on fill depth: a 4×4 ft box at 6 inches takes 8 cu ft (about 16 × 50 lb bags); a 6×6 at 6 inches takes 18 cu ft (about 36 bags). Use the calculator with your box size and a 4–8 inch depth.</p>
+    <h3>What kind of sand should I buy?</h3>
+    <p>Play sand (washed, screened) for sandboxes; mason sand for pool bases and general leveling; coarse concrete sand for paver bedding; polymeric sand for paver joints. Density is similar for all of them, so this calculator works for each.</p>
+    <h3>How much does a cubic yard of sand weigh?</h3>
+    <p>About 2,700 lb (1.35 tons) dry. Wet sand can exceed 3,000 lb per yard — one more reason a “ton” is not a fixed volume.</p>
+  </section>
+  <nav class="related">
+    <h2>Related calculators</h2>
+    <ul>
+      <li><a href="gravel-calculator.html">Gravel calculator</a></li>
+      <li><a href="pea-gravel-calculator.html">Pea gravel calculator</a></li>
+      <li><a href="fill-dirt-calculator.html">Fill dirt calculator</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 TheDirtCalc. Estimates only — confirm quantities with your supplier before ordering.</div>
+    <nav>
+      <a href="index.html">All calculators</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/calc.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulk vs. Bagged Calculator — Which Is Cheaper for Soil, Mulch & Gravel? | TheDirtCalc</title>
+<meta name="description" content="Free bulk vs. bagged calculator. Compare delivered bulk price per cubic yard against bag prices for topsoil, mulch, compost and gravel — and see exactly how much you save.">
+<link rel="canonical" href="https://beezilonka-bot.github.io/thedirtcalc/bulk-vs-bagged-calculator.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "At what point is bulk cheaper than bagged?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "With typical prices, bulk usually wins somewhere between 1 and 2 cubic yards \u2014 earlier when delivery is free or cheap, later when delivery fees are high. Small jobs under half a yard almost always favor bags once delivery is counted."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I include a delivery fee in the comparison?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Divide the flat delivery fee by the number of yards you will order and add it to the per-yard price. A $75 fee on a 2-yard order adds $37.50 per yard; on a 5-yard order it adds only $15 per yard."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How many bags equal one cubic yard?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Thirty-six bags at 0.75 cu ft, 27 at 1 cu ft, 18 at 1.5 cu ft, or 13.5 at 2 cu ft. Always check the printed bag volume, not the bag's weight."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is bagged material the same quality as bulk?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Often similar, sometimes better screened and more consistent; bulk varies by supplier and can contain weed seed or debris at the cheap end. For vegetable beds many gardeners prefer bagged or a reputable bulk supplier's tested blend."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I mix \u2014 bulk for the base, bags for the top?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, and it is a common money-saver: bulk fill dirt or topsoil for depth, bagged premium mix or compost for the top layer where plants feed. Calculate each layer with its own calculator page."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">The<span>Dirt</span>Calc</a>
+    <nav class="site-nav">
+      <a href="topsoil-calculator.html">Topsoil</a>
+      <a href="mulch-calculator.html">Mulch</a>
+      <a href="gravel-calculator.html">Gravel</a>
+      <a href="raised-bed-soil-calculator.html">Raised Beds</a>
+      <a href="bulk-vs-bagged-calculator.html">Bulk vs. Bagged</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Bulk vs. Bagged Calculator</h1>
+    <p class="lede">Should you order a bulk delivery or buy bags? Enter your project size and your local prices — delivered bulk per yard versus bag price — and see the true totals side by side.</p>
+  </div>
+<section class="calc calc-root" data-mode="bulk" data-material-name="Bulk vs. bagged">
+  <div class="unit-toggle">
+    <span class="lbl">Units:</span>
+    <button type="button" class="unit-btn active" data-system="imperial">Feet / Inches</button>
+    <button type="button" class="unit-btn" data-system="metric">Meters / Centimeters</button>
+  </div>
+  <fieldset class="area" data-area>
+    <legend>Area 1</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="20">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="10">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="3">
+      </div>
+    </div>
+  </fieldset>
+  <label class="checkline"><input type="checkbox" class="add-area"> Add a second area</label>
+  <fieldset class="area" data-area hidden>
+    <legend>Area 2</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="20">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="10">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="3">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="area">
+    <legend>Prices</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Bulk price ($ per cu yd, incl. delivery)</label>
+        <input class="p-bulk" type="number" step="any" min="0" value="58">
+      </div>
+      <div class="field">
+        <label>Bag size (cu ft)</label>
+        <select class="p-bagsize">
+          <option value="0.75">0.75 cu ft</option>
+          <option value="1.5" selected>1.5 cu ft</option>
+          <option value="2">2 cu ft</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Bag price ($ per bag)</label>
+        <input class="p-bag" type="number" step="any" min="0" value="4.98">
+      </div>
+    </div>
+    <p class="fineprint">Use the delivered bulk price — a $35/cu yd pile with a $75 delivery fee really costs more per yard than a $50/cu yd pile delivered free. If your supplier charges delivery separately, divide the fee by the yards ordered and add it to the per-yard price.</p>
+  </fieldset>
+  <div class="calc-actions"><button type="button" class="btn calc-btn">Compare costs</button></div>
+  <div class="calc-error" role="alert"></div>
+  <div class="results">
+    <h3>Your volume</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-area">0</span></div><div class="k">sq ft covered</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuft">0</span></div><div class="k">cubic feet</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuyd">0</span></div><div class="k">cubic yards</div></div>
+      <div class="result-box highlight"><div class="v"><span class="r-rec-cuyd">0</span></div><div class="k">cu yd incl. 10% extra</div></div>
+    </div>
+    <h3>Cost comparison</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-bulk-cost">$0</span></div><div class="k">bulk total (<span class="r-bulk-qty">0</span> cu yd)</div></div>
+      <div class="result-box"><div class="v"><span class="r-bag-cost">$0</span></div><div class="k">bagged total (<span class="r-bag-qty">0</span> bags)</div></div>
+    </div>
+    <p style="font-size:1.1rem;font-weight:700" class="r-verdict"></p>
+    <h3>Copy-ready summary</h3>
+    <textarea class="shop-list" readonly aria-label="Comparison summary"></textarea>
+    <p><button type="button" class="btn secondary copy-btn">Copy summary</button><span class="copy-note"></span></p>
+  </div>
+</section>
+  <section>
+    <h2>Bulk vs. bagged: how the math actually works</h2>
+    <p>Every bulk-versus-bagged comparison reduces to one number: <strong>price per cubic foot</strong>. A cubic yard is 27 cubic feet. Bulk material at $58 per yard delivered costs $58 ÷ 27 ≈ $2.15 per cubic foot. A 1.5 cu ft bag at $4.98 costs $4.98 ÷ 1.5 ≈ $3.32 per cubic foot. Bags carry a premium for the packaging, handling and retail shelf space — the question is only whether your project is big enough for the bulk minimums and delivery fees to stop mattering. This calculator does the full comparison with your real prices, including the 10% extra volume every project actually needs.</p>
+    <p>Delivery is the trap in most comparisons. A supplier advertising $35 per yard with a $75 delivery fee is really charging $110 for the first yard — more than $55 per yard for a “$55, delivered free” competitor on a 2-yard order. Enter bulk price the way this calculator asks for it: <strong>per yard including delivery</strong>. If delivery is a flat fee, divide it by the yards you are ordering and add it to the per-yard price. Also check minimum orders: many yards will not deliver less than 1–2 yards, and some add small-load fees that work the same way.</p>
+    <p>Bags are not always the wrong answer. For small jobs — under about half a yard — bags win because there is no delivery fee, no minimum, and no pile in the driveway. Bags are also cleaner for raised beds on a deck, top-ups, and jobs spread over several weekends, since unopened bags keep. Bulk wins on price per volume almost every time past 1–2 yards, and it wins on plastic waste by an enormous margin: a 3-yard mulch job in 1.5 cu ft bags is 54 bags and 54 trips from the car to the bed. Run your numbers above; the verdict line uses your prices, not national averages.</p>
+  </section>
+  <section class="example">
+    <h3>Worked example: mulch for a 20 ft × 10 ft bed area, 3 inches deep</h3>
+    <p>Beds totaling 200 sq ft at 3 inches deep need 50 cubic feet (1.85 cu yd), or 55 cubic feet with the 10% buffer — <strong>2.04 cu yd</strong>. At a delivered bulk price of $58 per yard, that is 2.04 × $58 = <strong>$118.15</strong>. In 1.5 cu ft bags at $4.98 you need 37 bags = <strong>$184.26</strong>. Bulk wins by about <strong>$66</strong> on this mid-size job. Shrink the same job to a 12 cu ft planter and the verdict flips: eight bags cost about $40, while a 1-yard minimum bulk load plus delivery can top $100 — bags win small, bulk wins big, and the crossover is exactly what this calculator finds.</p>
+  </section>
+  <section>
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Comparing shelf price to shelf price.</strong> The honest bulk price includes delivery and minimum-load fees; the honest bag price accounts for bag size. Comparing “$35/yard” to “$4.98/bag” directly compares nothing.</li>
+      <li><strong>Forgetting the second trip.</strong> Bag projects are famous for the mid-job store run. The 10% buffer is cheaper than an hour of driving — and the extra bags are returnable if unopened at most stores.</li>
+      <li><strong>Ignoring the pile problem.</strong> Bulk material lands in your driveway and needs to move within days (HOAs and stained concrete are real). If you cannot move 2 yards in a weekend, bags staged in the garage may be worth their premium.</li>
+      <li><strong>Assuming bags are always 2 cu ft.</strong> Bagged soil and mulch sizes include 0.75, 1, 1.5 and 2 cu ft, and gravel often comes in 0.5 cu ft. The size selector above exists because this one detail flips most comparisons.</li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>At what point is bulk cheaper than bagged?</h3>
+    <p>With typical prices, bulk usually wins somewhere between 1 and 2 cubic yards — earlier when delivery is free or cheap, later when delivery fees are high. Small jobs under half a yard almost always favor bags once delivery is counted.</p>
+    <h3>How do I include a delivery fee in the comparison?</h3>
+    <p>Divide the flat delivery fee by the number of yards you will order and add it to the per-yard price. A $75 fee on a 2-yard order adds $37.50 per yard; on a 5-yard order it adds only $15 per yard.</p>
+    <h3>How many bags equal one cubic yard?</h3>
+    <p>Thirty-six bags at 0.75 cu ft, 27 at 1 cu ft, 18 at 1.5 cu ft, or 13.5 at 2 cu ft. Always check the printed bag volume, not the bag's weight.</p>
+    <h3>Is bagged material the same quality as bulk?</h3>
+    <p>Often similar, sometimes better screened and more consistent; bulk varies by supplier and can contain weed seed or debris at the cheap end. For vegetable beds many gardeners prefer bagged or a reputable bulk supplier's tested blend.</p>
+    <h3>Can I mix — bulk for the base, bags for the top?</h3>
+    <p>Yes, and it is a common money-saver: bulk fill dirt or topsoil for depth, bagged premium mix or compost for the top layer where plants feed. Calculate each layer with its own calculator page.</p>
+  </section>
+  <nav class="related">
+    <h2>Related calculators</h2>
+    <ul>
+      <li><a href="mulch-calculator.html">Mulch calculator</a></li>
+      <li><a href="topsoil-calculator.html">Topsoil calculator</a></li>
+      <li><a href="gravel-calculator.html">Gravel calculator</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 TheDirtCalc. Estimates only — confirm quantities with your supplier before ordering.</div>
+    <nav>
+      <a href="index.html">All calculators</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/calc.js"></script>
+</body>
+</html>

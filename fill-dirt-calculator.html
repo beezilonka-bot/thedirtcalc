@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fill Dirt Calculator — Cubic Yards & Tons for Grading | TheDirtCalc</title>
+<meta name="description" content="Free fill dirt calculator for leveling yards, filling holes and raising grade. Get cubic yards and tons from area and average depth, with compaction covered.">
+<link rel="canonical" href="https://beezilonka-bot.github.io/thedirtcalc/fill-dirt-calculator.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How much fill dirt do I need to level a yard?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It depends entirely on average depth. Example: 1,000 sq ft averaging 3 inches low needs 250 cu ft \u2248 9.3 cu yd. Measure depth at several points and average \u2014 never guess from the deepest spot."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much does a cubic yard of fill dirt weigh?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "About 2,400 lb (1.2 tons) in place at the 90 lb/cu ft average used here. Very rocky or clay-heavy fill can run heavier; sandy fill a little lighter."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between fill dirt and topsoil?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Fill dirt is subsoil \u2014 mineral soil dug from below the surface, low in organic matter, used for raising and leveling grade because it compacts stably. Topsoil is the dark, organic top layer plants grow in. Use fill for shape, topsoil for growing."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much extra fill dirt should I order for compaction?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "About 10% for shallow, hand-tamped fills (built into the recommended order here) and 15\u201320% for deep fills over 12 inches, especially if you cannot compact in layers."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I use fill dirt under a patio or shed?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes \u2014 compacted fill dirt is a standard sub-base. Compact in 4-inch layers, then add your gravel base on top. Uncompacted fill is the mistake; the material itself is fine."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">The<span>Dirt</span>Calc</a>
+    <nav class="site-nav">
+      <a href="topsoil-calculator.html">Topsoil</a>
+      <a href="mulch-calculator.html">Mulch</a>
+      <a href="gravel-calculator.html">Gravel</a>
+      <a href="raised-bed-soil-calculator.html">Raised Beds</a>
+      <a href="bulk-vs-bagged-calculator.html">Bulk vs. Bagged</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Fill Dirt Calculator</h1>
+    <p class="lede">Leveling a low spot, filling an old pool hole or raising grade along a foundation? Enter the area and average depth for cubic yards and tons of fill dirt.</p>
+  </div>
+<section class="calc calc-root" data-mode="material" data-material-name="Fill dirt">
+  <div class="unit-toggle">
+    <span class="lbl">Units:</span>
+    <button type="button" class="unit-btn active" data-system="imperial">Feet / Inches</button>
+    <button type="button" class="unit-btn" data-system="metric">Meters / Centimeters</button>
+  </div>
+  <fieldset class="area" data-area>
+    <legend>Area 1</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="15">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="20">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="6">
+      </div>
+    </div>
+  </fieldset>
+  <label class="checkline"><input type="checkbox" class="add-area"> Add a second area (two beds, a patio plus a path, …)</label>
+  <fieldset class="area" data-area hidden>
+    <legend>Area 2</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="15">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="20">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="6">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="area">
+    <legend>Material density <span style="font-weight:400;font-size:.85rem">(adjust if your supplier quotes a different weight)</span></legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Density (lb per cu ft)</label>
+        <input class="d-lb" type="number" step="any" min="0" value="90">
+      </div>
+      <div class="field">
+        <label>Density (tons per cu yd)</label>
+        <input class="d-tons" type="number" step="any" min="0" value="1.215">
+      </div>
+    </div>
+    <p class="fineprint">Fill dirt — subsoil with little organic matter — runs about 90 lb per cubic foot in place, roughly 1.22 tons per cubic yard. It is denser than topsoil because it is mostly mineral soil and small rock, but lighter than gravel. Loose dumped fill fluffs up about 20–25% over its in-ground volume and then compacts back down, which is why grading jobs are so easy to under-order.</p>
+  </fieldset>
+  <div class="calc-actions"><button type="button" class="btn calc-btn">Calculate</button></div>
+  <div class="calc-error" role="alert"></div>
+  <div class="results">
+    <h3>Your results</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-area">0</span></div><div class="k">sq ft covered</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuft">0</span></div><div class="k">cubic feet</div></div>
+      <div class="result-box highlight"><div class="v"><span class="r-cuyd">0</span></div><div class="k">cubic yards</div></div>
+      <div class="result-box"><div class="v"><span class="r-tons">0</span></div><div class="k">tons (approx. weight)</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Recommended order — includes 10% extra for settling &amp; spills</h3>
+    <div class="result-grid">
+      <div class="result-box highlight"><div class="v"><span class="r-rec-cuyd">0</span></div><div class="k">cubic yards to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-tons">0</span></div><div class="k">tons to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Copy-ready shopping list</h3>
+    <textarea class="shop-list" readonly aria-label="Shopping list"></textarea>
+    <p><button type="button" class="btn secondary copy-btn">Copy shopping list</button><span class="copy-note"></span></p>
+  </div>
+</section>
+  <section>
+    <h2>How to calculate fill dirt</h2>
+    <p>Fill dirt jobs are grading jobs, so the key input is <strong>average depth</strong>. For a low area, drive stakes at the corners, run a level string, and measure the depth at several points — then average them. A spot that is 2 inches low at the edges and 10 inches low in the middle needs the average (about 6 inches), not the maximum. Volume = area × average depth; divide by 27 for cubic yards and multiply cubic feet by about 90 lb for tons.</p>
+    <p>Fill behaves differently from topsoil in one important way: <strong>compaction</strong>. Loose fill placed in a hole will settle 10–15% as it is compacted and rained on — more if you dump it all in at once without tamping. Pros place fill in 4–6 inch layers and compact each one. The 10% buffer in the recommended order covers normal settling for shallow fills; for holes deeper than about 12 inches, add 15–20% and plan to crown the fill slightly above grade so it settles level.</p>
+    <p>Finally, fill dirt is not a growing medium. It is the right product for raising grade, filling holes and building up under patios or sheds, but anything you plan to plant needs 4–6 inches of topsoil on top of the fill. If your project needs both, calculate the fill to a few inches below final grade and use the topsoil calculator for the top layer — the second-area option lets you do both layers in one pass here as a rough combined volume.</p>
+  </section>
+  <section class="example">
+    <h3>Worked example: 15 ft × 20 ft low spot, average 6 inches deep</h3>
+    <p>A 15 ft × 20 ft low area is 300 sq ft. At an average depth of 6 inches (0.5 ft) the fill volume is 300 × 0.5 = 150 cubic feet = <strong>5.56 cubic yards</strong>. At 90 lb per cubic foot that is 13,500 lb ≈ <strong>6.75 tons</strong>. With normal settling, order about <strong>6.1 cubic yards</strong> (7.43 tons with the 10% buffer), spread it slightly crowned, and expect it to finish level after a few rains.</p>
+  </section>
+  <section>
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Using the deepest measurement everywhere.</strong> Depth at the center of a swale is not the average depth. Using it across the whole area can double your order — and leave you with a pile of leftover dirt to move.</li>
+      <li><strong>Dumping deep fill in one lift.</strong> Uncompacted fill keeps settling for months, taking patios and shed floors with it. Fill in layers and tamp or roll each one.</li>
+      <li><strong>Planting directly into fill dirt.</strong> Subsoil lacks organic matter and structure; grass and beds struggle. Cap fill with 4–6 inches of topsoil anywhere plants will grow.</li>
+      <li><strong>Ignoring drainage slope.</strong> Grade next to a house should fall away about 6 inches over the first 10 feet. Filling a low spot flat can redirect water toward the foundation instead of away from it.</li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>How much fill dirt do I need to level a yard?</h3>
+    <p>It depends entirely on average depth. Example: 1,000 sq ft averaging 3 inches low needs 250 cu ft ≈ 9.3 cu yd. Measure depth at several points and average — never guess from the deepest spot.</p>
+    <h3>How much does a cubic yard of fill dirt weigh?</h3>
+    <p>About 2,400 lb (1.2 tons) in place at the 90 lb/cu ft average used here. Very rocky or clay-heavy fill can run heavier; sandy fill a little lighter.</p>
+    <h3>What is the difference between fill dirt and topsoil?</h3>
+    <p>Fill dirt is subsoil — mineral soil dug from below the surface, low in organic matter, used for raising and leveling grade because it compacts stably. Topsoil is the dark, organic top layer plants grow in. Use fill for shape, topsoil for growing.</p>
+    <h3>How much extra fill dirt should I order for compaction?</h3>
+    <p>About 10% for shallow, hand-tamped fills (built into the recommended order here) and 15–20% for deep fills over 12 inches, especially if you cannot compact in layers.</p>
+    <h3>Can I use fill dirt under a patio or shed?</h3>
+    <p>Yes — compacted fill dirt is a standard sub-base. Compact in 4-inch layers, then add your gravel base on top. Uncompacted fill is the mistake; the material itself is fine.</p>
+  </section>
+  <nav class="related">
+    <h2>Related calculators</h2>
+    <ul>
+      <li><a href="topsoil-calculator.html">Topsoil calculator</a></li>
+      <li><a href="gravel-calculator.html">Gravel calculator</a></li>
+      <li><a href="sand-calculator.html">Sand calculator</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 TheDirtCalc. Estimates only — confirm quantities with your supplier before ordering.</div>
+    <nav>
+      <a href="index.html">All calculators</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/calc.js"></script>
+</body>
+</html>

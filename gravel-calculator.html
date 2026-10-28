@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gravel Calculator — Tons & Cubic Yards for Driveways | TheDirtCalc</title>
+<meta name="description" content="Free gravel calculator for driveways, paths and drainage. Get tons and cubic yards for crushed stone, pea gravel and river rock, each with its own density.">
+<link rel="canonical" href="https://beezilonka-bot.github.io/thedirtcalc/gravel-calculator.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How many tons are in a cubic yard of gravel?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "About 1.35 tons for crushed stone, 1.30 for pea gravel and 1.22 for river rock at the densities used here. Suppliers' conversions vary a little with stone type and moisture \u2014 ask yours if their number differs and enter it above."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How deep should a gravel driveway be?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Four to six inches in total. A common build is 3\u20134 inches of coarse base stone plus 2\u20133 inches of finer top stone, each compacted. This calculator's total-depth approach works if you enter the combined depth."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much gravel do I need for a 100 sq ft area?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "At 2 inches deep: 16.7 cu ft \u2248 0.62 cu yd \u2248 0.83 tons of crushed stone. At 4 inches deep, double it: about 1.23 cu yd \u2248 1.67 tons."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between gravel, crushed stone and pea gravel?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "\u201cGravel\u201d is the umbrella term. Crushed stone is mechanically crushed, angular rock that compacts and locks \u2014 best for driveways and bases. Pea gravel is small, naturally rounded stone about \u215c inch across \u2014 comfortable underfoot, poor at locking. River rock is larger rounded stone used decoratively."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How many bags of gravel make a ton?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A typical 0.5 cu ft bag of gravel weighs about 50 lb, so roughly 40 bags make a ton. At that rate bags only make sense for small patches \u2014 anything over half a ton is usually cheaper delivered in bulk."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">The<span>Dirt</span>Calc</a>
+    <nav class="site-nav">
+      <a href="topsoil-calculator.html">Topsoil</a>
+      <a href="mulch-calculator.html">Mulch</a>
+      <a href="gravel-calculator.html">Gravel</a>
+      <a href="raised-bed-soil-calculator.html">Raised Beds</a>
+      <a href="bulk-vs-bagged-calculator.html">Bulk vs. Bagged</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Gravel Calculator</h1>
+    <p class="lede">Gravel is sold by the ton, so volume alone is not enough. Pick your stone type, enter the area and depth, and get cubic yards, tons and bag counts.</p>
+  </div>
+<section class="calc calc-root" data-mode="material" data-material-name="Gravel">
+  <div class="unit-toggle">
+    <span class="lbl">Units:</span>
+    <button type="button" class="unit-btn active" data-system="imperial">Feet / Inches</button>
+    <button type="button" class="unit-btn" data-system="metric">Meters / Centimeters</button>
+  </div>
+  <fieldset class="area" data-area>
+    <legend>Area 1</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="12">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="40">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="4">
+      </div>
+    </div>
+  </fieldset>
+  <label class="checkline"><input type="checkbox" class="add-area"> Add a second area (two beds, a patio plus a path, …)</label>
+  <fieldset class="area" data-area hidden>
+    <legend>Area 2</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="12">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="40">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="4">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="area">
+    <legend>Material density <span style="font-weight:400;font-size:.85rem">(adjust if your supplier quotes a different weight)</span></legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Stone type <span class="hint">(sets the density below)</span></label>
+        <select class="stone-type">
+          <option value="crushed" data-density="100" selected>Crushed stone (driveways, base)</option>
+          <option value="pea" data-density="96">Pea gravel (paths, play areas)</option>
+          <option value="river" data-density="90">River rock (decorative beds)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Density (lb per cu ft)</label>
+        <input class="d-lb" type="number" step="any" min="0" value="100">
+      </div>
+      <div class="field">
+        <label>Density (tons per cu yd)</label>
+        <input class="d-tons" type="number" step="any" min="0" value="1.350">
+      </div>
+    </div>
+    <p class="fineprint">Crushed stone averages about 100 lb per cubic foot (1.35 tons per cubic yard). Pea gravel is a little lighter at about 96 lb/cu ft (1.30 tons/yd³) because the rounded pieces pack less tightly, and river rock is lighter again at about 90 lb/cu ft (1.22 tons/yd³). Angular crushed stone locks together and compacts; round stone stays loose — that difference is exactly why the densities differ.</p>
+  </fieldset>
+  <div class="calc-actions"><button type="button" class="btn calc-btn">Calculate</button></div>
+  <div class="calc-error" role="alert"></div>
+  <div class="results">
+    <h3>Your results</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-area">0</span></div><div class="k">sq ft covered</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuft">0</span></div><div class="k">cubic feet</div></div>
+      <div class="result-box highlight"><div class="v"><span class="r-cuyd">0</span></div><div class="k">cubic yards</div></div>
+      <div class="result-box"><div class="v"><span class="r-tons">0</span></div><div class="k">tons (approx. weight)</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Recommended order — includes 10% extra for settling &amp; spills</h3>
+    <div class="result-grid">
+      <div class="result-box highlight"><div class="v"><span class="r-rec-cuyd">0</span></div><div class="k">cubic yards to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-tons">0</span></div><div class="k">tons to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Copy-ready shopping list</h3>
+    <textarea class="shop-list" readonly aria-label="Shopping list"></textarea>
+    <p><button type="button" class="btn secondary copy-btn">Copy shopping list</button><span class="copy-note"></span></p>
+  </div>
+</section>
+  <section>
+    <h2>How to calculate gravel — and why tons matter</h2>
+    <p>Start with volume as usual: <strong>area × depth, divided by 27</strong> gives cubic yards. But most gravel yards price by the <strong>ton</strong>, so the second step is converting volume to weight with the stone's density. The quick industry rule is about 1.35 tons per cubic yard for crushed stone; this calculator uses per-stone densities (100 lb/cu ft crushed, 96 pea gravel, 90 river rock) so your tonnage estimate matches the stone you are actually buying. If a supplier quotes a different yards-to-tons conversion, type it into the density fields and everything updates.</p>
+    <p>Depth depends on the job. A gravel driveway typically needs 4–6 inches total, ideally in layers: a coarse base layer, a middle layer, and a finer top layer. A simple path or patio base takes 2–4 inches (plus sand or screenings on top for pavers). Drainage trenches and French drains are usually filled to within a few inches of the surface — measure the trench itself, and use the second-area option if the trench has an L or T shape.</p>
+    <p>Order with a buffer. Gravel compacts under traffic — a freshly spread 4-inch layer may settle to 3 inches — and some always spills outside the edges. The recommended order here adds 10%. Also check your supplier's minimum: many yards deliver from 1 ton up, and a “yard” of gravel (about 1.35 tons) is a common minimum load, so for small jobs a few dozen bags can be simpler even if the per-ton price looks worse.</p>
+  </section>
+  <section class="example">
+    <h3>Worked example: 12 ft × 40 ft driveway, 4 inches deep</h3>
+    <p>A 12 ft × 40 ft driveway is 480 sq ft. At 4 inches (0.33 ft) deep the volume is 480 × 0.33 = 160 cubic feet = <strong>5.93 cubic yards</strong>. Crushed stone at 100 lb per cubic foot weighs 160 × 100 = 16,000 lb = <strong>8.00 tons</strong>. With the 10% compaction buffer, order about <strong>8.80 tons</strong> (6.52 cu yd). Note how the same area in pea gravel would weigh slightly less — 7.68 tons before the buffer — because of the lower density.</p>
+  </section>
+  <section>
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Ordering by the yard when the quote is by the ton.</strong> A “yard” of gravel is a volume (27 cu ft); a ton is weight. At 1.35 tons per yard they differ by 35% — enough to blow a budget or strand a half-finished driveway.</li>
+      <li><strong>One layer, full depth, all at once.</strong> Deep single layers of fine gravel migrate and rut. Compact in lifts of 2–3 inches, or build distinct base and top layers.</li>
+      <li><strong>Using round stone on a driveway.</strong> Pea gravel and river rock roll under tires and feet instead of locking. Driveways and structural bases need angular crushed stone; save round stone for decorative, low-traffic areas.</li>
+      <li><strong>Forgetting the fabric and edging.</strong> Gravel spread straight onto soil slowly sinks into it. Landscape fabric plus rigid edging keeps your calculated depth where you put it.</li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>How many tons are in a cubic yard of gravel?</h3>
+    <p>About 1.35 tons for crushed stone, 1.30 for pea gravel and 1.22 for river rock at the densities used here. Suppliers' conversions vary a little with stone type and moisture — ask yours if their number differs and enter it above.</p>
+    <h3>How deep should a gravel driveway be?</h3>
+    <p>Four to six inches in total. A common build is 3–4 inches of coarse base stone plus 2–3 inches of finer top stone, each compacted. This calculator's total-depth approach works if you enter the combined depth.</p>
+    <h3>How much gravel do I need for a 100 sq ft area?</h3>
+    <p>At 2 inches deep: 16.7 cu ft ≈ 0.62 cu yd ≈ 0.83 tons of crushed stone. At 4 inches deep, double it: about 1.23 cu yd ≈ 1.67 tons.</p>
+    <h3>What is the difference between gravel, crushed stone and pea gravel?</h3>
+    <p>“Gravel” is the umbrella term. Crushed stone is mechanically crushed, angular rock that compacts and locks — best for driveways and bases. Pea gravel is small, naturally rounded stone about ⅜ inch across — comfortable underfoot, poor at locking. River rock is larger rounded stone used decoratively.</p>
+    <h3>How many bags of gravel make a ton?</h3>
+    <p>A typical 0.5 cu ft bag of gravel weighs about 50 lb, so roughly 40 bags make a ton. At that rate bags only make sense for small patches — anything over half a ton is usually cheaper delivered in bulk.</p>
+  </section>
+  <nav class="related">
+    <h2>Related calculators</h2>
+    <ul>
+      <li><a href="pea-gravel-calculator.html">Pea gravel calculator</a></li>
+      <li><a href="river-rock-calculator.html">River rock calculator</a></li>
+      <li><a href="sand-calculator.html">Sand calculator</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 TheDirtCalc. Estimates only — confirm quantities with your supplier before ordering.</div>
+    <nav>
+      <a href="index.html">All calculators</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/calc.js"></script>
+</body>
+</html>
