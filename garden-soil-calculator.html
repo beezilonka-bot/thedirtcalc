@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garden Soil Calculator — Soil for In-Ground Vegetable Beds | TheDirtCalc</title>
+<meta name="description" content="Free garden soil calculator for open, in-ground vegetable beds and rows. Get cubic yards, tons and bags for new beds and for amending existing garden soil.">
+<link rel="canonical" href="https://beezilonka-bot.github.io/thedirtcalc/garden-soil-calculator.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How much soil do I need for a vegetable garden?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "For an in-ground bed, calculate only the layer you are adding: area \u00d7 added depth \u00f7 27. A 20 \u00d7 30 ft garden getting 6 inches of blend needs 11.11 cubic yards. Refreshing an existing bed at 2\u20133 inches needs roughly a third to half of that."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between garden soil and raised bed mix?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "They are close cousins \u2014 both are topsoil-and-compost blends. Raised bed mix is blended lighter and fluffier (often with bark or perlite-style aeration) because a box has no native soil to lean on and drainage is critical. In-ground garden soil can be a denser, cheaper blend because it marries into the soil below."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much compost should I add to a garden bed?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A 2\u20133 inch layer worked into the top of the bed is the standard annual amendment for an established garden; new beds on poor ground often start with 3\u20134 inches. At 2 inches deep, one cubic yard of compost covers about 162 sq ft."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Should I fill my whole garden plot or just the beds?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Just the beds. Paths can stay native soil, gravel or mulch. In a typical layout beds are 60\u201370% of the plot, so measuring bed area only \u2014 or using this calculator's second area for separate bed blocks \u2014 cuts the soil bill by a third."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How deep should the soil be for vegetables?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Most vegetables root happily in 8\u201312 inches of decent soil over loosened ground; deep-rooted crops like carrots and parsnips want the full 12. In-ground, that depth is native soil plus what you add \u2014 you do not need to buy all 12 inches."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">The<span>Dirt</span>Calc</a>
+    <nav class="site-nav">
+      <a href="topsoil-calculator.html">Topsoil</a>
+      <a href="mulch-calculator.html">Mulch</a>
+      <a href="gravel-calculator.html">Gravel</a>
+      <a href="raised-bed-soil-calculator.html">Raised Beds</a>
+      <a href="bulk-vs-bagged-calculator.html">Bulk vs. Bagged</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Garden Soil Calculator</h1>
+    <p class="lede">For gardens that grow in the ground, not in a frame: enter your bed or plot size and the depth of soil to add, and get yards, tons and bags.</p>
+  </div>
+<section class="calc calc-root" data-mode="material" data-material-name="Garden soil">
+  <div class="unit-toggle">
+    <span class="lbl">Units:</span>
+    <button type="button" class="unit-btn active" data-system="imperial">Feet / Inches</button>
+    <button type="button" class="unit-btn" data-system="metric">Meters / Centimeters</button>
+  </div>
+  <fieldset class="area" data-area>
+    <legend>Area 1</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="20">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="30">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="6">
+      </div>
+    </div>
+  </fieldset>
+  <label class="checkline"><input type="checkbox" class="add-area"> Add a second area (two beds, a patio plus a path, …)</label>
+  <fieldset class="area" data-area hidden>
+    <legend>Area 2</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="20">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="30">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="6">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="area">
+    <legend>Material density <span style="font-weight:400;font-size:.85rem">(adjust if your supplier quotes a different weight)</span></legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Density (lb per cu ft)</label>
+        <input class="d-lb" type="number" step="any" min="0" value="45">
+      </div>
+      <div class="field">
+        <label>Density (tons per cu yd)</label>
+        <input class="d-tons" type="number" step="any" min="0" value="0.608">
+      </div>
+    </div>
+    <p class="fineprint">Garden soil for in-ground beds is usually a blend of topsoil and compost, and blends run light: about 45 lb per cubic foot, roughly 0.61 tons per cubic yard — the same figure this site uses for raised bed mix. If you are adding straight compost instead, it is closer to 40 lb/cu ft; straight topsoil is nearer 75. Set the density to match what you are actually spreading.</p>
+  </fieldset>
+  <div class="calc-actions"><button type="button" class="btn calc-btn">Calculate</button></div>
+  <div class="calc-error" role="alert"></div>
+  <div class="results">
+    <h3>Your results</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-area">0</span></div><div class="k">sq ft covered</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuft">0</span></div><div class="k">cubic feet</div></div>
+      <div class="result-box highlight"><div class="v"><span class="r-cuyd">0</span></div><div class="k">cubic yards</div></div>
+      <div class="result-box"><div class="v"><span class="r-tons">0</span></div><div class="k">tons (approx. weight)</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Recommended order — includes 10% extra for settling &amp; spills</h3>
+    <div class="result-grid">
+      <div class="result-box highlight"><div class="v"><span class="r-rec-cuyd">0</span></div><div class="k">cubic yards to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-tons">0</span></div><div class="k">tons to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Copy-ready shopping list</h3>
+    <textarea class="shop-list" readonly aria-label="Shopping list"></textarea>
+    <p><button type="button" class="btn secondary copy-btn">Copy shopping list</button><span class="copy-note"></span></p>
+  </div>
+</section>
+
+  <section>
+    <h2>How much garden soil does an in-ground bed need?</h2>
+    <p>This calculator is for the open garden — beds and rows dug into the ground — as opposed to the framed boxes covered by the raised bed calculator. The difference matters for the numbers. A raised bed starts empty and is filled to its full depth with bought mix. An in-ground bed starts with <strong>native soil that is already there</strong>, so most projects are adding a layer, not filling a void: a new bed typically gets 4–6 inches of garden soil or a soil–compost blend worked into the loosened top of the native ground, and an established bed being refreshed gets 2–3 inches. Enter the depth you are actually adding, not the depth of the root zone you wish you had.</p>
+    <p>The standard volume math applies — <strong>length × width × depth ÷ 27 = cubic yards</strong> — with one garden-specific twist: amendment math. Gardeners often work in ratios: to build a new bed over poor ground, a common recipe is roughly half existing loosened soil, half added blend, with 2–3 inches of straight compost on top in the first year. If your plan is compost only, run it at that depth with the density set to 40; if it is a blend, keep the default density. Either way, the recommended order adds 10% because loose soil settles into the native ground as soon as it is watered and walked on.</p>
+    <p>Quality beats quantity in a vegetable bed, because the soil is the fertilizer programme. A blend with real compost in it (you should be able to see dark, crumbly organic matter, not just brown dirt) will out-grow a larger volume of plain topsoil. Four inches of good blend beats eight inches of cheap fill; if the budget forces a choice, put the good material where the heavy feeders (tomatoes, squash, brassicas) will grow.</p>
+  </section>
+  <section class="example">
+    <h3>Worked example: a 20 ft × 30 ft vegetable garden, adding 6 inches of blend</h3>
+    <p>A 20 ft × 30 ft plot is 600 sq ft. Adding 6 inches (0.5 ft) of garden soil blend gives 600 × 0.5 = 300 cubic feet, or <strong>11.11 cubic yards</strong>. At the blend density of 45 lb per cubic foot that weighs about 13,500 lb, or <strong>6.75 tons</strong> — a bulk delivery, since bagged blend would take 200 of the 1.5 cu ft bags. With the 10% settling buffer, order <strong>12.22 cubic yards</strong>. Note the contrast with a framed garden of the same footprint: four 4 × 8 ft raised beds at 12 inches deep would need only about 4.74 cubic yards of mix, because the paths between beds are not filled.</p>
+  </section>
+  <section>
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Calculating an in-ground bed like an empty box.</strong> Your native soil is still there. Ordering the full root-zone depth as bought soil doubles or triples the real requirement — enter only the depth you are adding.</li>
+      <li><strong>Filling the paths too.</strong> In a bed-and-path layout, only the beds get good soil. Measuring the whole plot when a third of it is paths inflates the order by that third.</li>
+      <li><strong>Buying plain topsoil and calling it garden soil.</strong> Topsoil alone is low in organic matter and nutrients. Vegetables want a blend with substantial compost; if you buy topsoil, budget separately for 2–3 inches of compost to work in.</li>
+      <li><strong>Working soil when it is wet.</strong> Digging and tilling saturated soil destroys its structure and creates hard clods that persist all season. Add and work your new soil when the ground is moist, not muddy — the volume math assumes it spreads like soil, not like cement.</li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>How much soil do I need for a vegetable garden?</h3>
+    <p>For an in-ground bed, calculate only the layer you are adding: area × added depth ÷ 27. A 20 × 30 ft garden getting 6 inches of blend needs 11.11 cubic yards. Refreshing an existing bed at 2–3 inches needs roughly a third to half of that.</p>
+    <h3>What is the difference between garden soil and raised bed mix?</h3>
+    <p>They are close cousins — both are topsoil-and-compost blends. Raised bed mix is blended lighter and fluffier (often with bark or perlite-style aeration) because a box has no native soil to lean on and drainage is critical. In-ground garden soil can be a denser, cheaper blend because it marries into the soil below.</p>
+    <h3>How much compost should I add to a garden bed?</h3>
+    <p>A 2–3 inch layer worked into the top of the bed is the standard annual amendment for an established garden; new beds on poor ground often start with 3–4 inches. At 2 inches deep, one cubic yard of compost covers about 162 sq ft.</p>
+    <h3>Should I fill my whole garden plot or just the beds?</h3>
+    <p>Just the beds. Paths can stay native soil, gravel or mulch. In a typical layout beds are 60–70% of the plot, so measuring bed area only — or using this calculator's second area for separate bed blocks — cuts the soil bill by a third.</p>
+    <h3>How deep should the soil be for vegetables?</h3>
+    <p>Most vegetables root happily in 8–12 inches of decent soil over loosened ground; deep-rooted crops like carrots and parsnips want the full 12. In-ground, that depth is native soil plus what you add — you do not need to buy all 12 inches.</p>
+  </section>
+  <nav class="related">
+    <h2>Related calculators</h2>
+    <ul>
+      <li><a href="raised-bed-soil-calculator.html">Raised bed soil calculator</a></li>
+      <li><a href="compost-calculator.html">Compost calculator</a></li>
+      <li><a href="soil-calculator.html">Soil calculator</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 TheDirtCalc. Estimates only — confirm quantities with your supplier before ordering.</div>
+    <nav>
+      <a href="index.html">All calculators</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/calc.js"></script>
+
+</body>
+</html>

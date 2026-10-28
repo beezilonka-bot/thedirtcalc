@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lawn Topdressing Calculator — Yards per Lawn at ¼–½ Inch | TheDirtCalc</title>
+<meta name="description" content="Free lawn topdressing calculator. Find out how much compost or topdressing mix you need at 1/4 to 1/2 inch over your lawn, in cubic yards, tons and bags.">
+<link rel="canonical" href="https://beezilonka-bot.github.io/thedirtcalc/lawn-topdressing-calculator.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How much topdressing do I need per 1,000 sq ft?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "At \u00bc inch deep, about 0.77 cubic yards per 1,000 sq ft; at \u00bd inch, about 1.54 cubic yards. A full cubic yard covers roughly 1,296 sq ft at \u00bc inch or 648 sq ft at \u00bd inch."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How deep should lawn topdressing be?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "\u00bc inch is the standard single pass and the safest depth over seed; \u00bd inch is the practical maximum the grass can grow through. For levelling deeper hollows, build up in several \u00bc-inch passes across the season rather than one thick layer."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is compost or sand better for topdressing?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Compost for most lawns: it feeds the soil and helps seed. Sand is for levelling firm, intensively managed turf and adds no nutrition. Many gardeners use a compost\u2013soil mix for shallow depressions. The volume is identical either way \u2014 only the weight changes (sand is about 2.5\u00d7 heavier per yard)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When is the best time to topdress a lawn?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "When the grass is actively growing and can recover quickly \u2014 early fall is ideal for cool-season lawns (and pairs with overseeding), late spring for warm-season lawns. Avoid topdressing stressed, dormant or waterlogged turf."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I topdress without aerating?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes \u2014 topdressing alone still improves the soil surface and seed contact. Core aeration first makes it work harder, because material falls into the holes and reaches the root zone, but it is an enhancer, not a requirement."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">The<span>Dirt</span>Calc</a>
+    <nav class="site-nav">
+      <a href="topsoil-calculator.html">Topsoil</a>
+      <a href="mulch-calculator.html">Mulch</a>
+      <a href="gravel-calculator.html">Gravel</a>
+      <a href="raised-bed-soil-calculator.html">Raised Beds</a>
+      <a href="bulk-vs-bagged-calculator.html">Bulk vs. Bagged</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Lawn Topdressing Calculator</h1>
+    <p class="lede">Topdressing is a thin-layer game: a quarter inch over thousands of square feet. Enter your lawn size and layer depth to get compost or topdressing mix in yards and bags.</p>
+  </div>
+<section class="calc calc-root" data-mode="material" data-material-name="Topdressing mix">
+  <div class="unit-toggle">
+    <span class="lbl">Units:</span>
+    <button type="button" class="unit-btn active" data-system="imperial">Feet / Inches</button>
+    <button type="button" class="unit-btn" data-system="metric">Meters / Centimeters</button>
+  </div>
+  <fieldset class="area" data-area>
+    <legend>Area 1</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="50">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="100">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="0.25">
+      </div>
+    </div>
+  </fieldset>
+  <label class="checkline"><input type="checkbox" class="add-area"> Add a second area (two beds, a patio plus a path, …)</label>
+  <fieldset class="area" data-area hidden>
+    <legend>Area 2</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="50">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="100">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="0.25">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="area">
+    <legend>Material density <span style="font-weight:400;font-size:.85rem">(adjust if your supplier quotes a different weight)</span></legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Density (lb per cu ft)</label>
+        <input class="d-lb" type="number" step="any" min="0" value="40">
+      </div>
+      <div class="field">
+        <label>Density (tons per cu yd)</label>
+        <input class="d-tons" type="number" step="any" min="0" value="0.540">
+      </div>
+    </div>
+    <p class="fineprint">Finished compost — the most common topdressing material — averages about 40 lb per cubic foot, roughly 0.54 tons per cubic yard. Sand topdressing is much heavier (about 100 lb/cu ft); if you are topdressing with sand or a sand-heavy mix, change the density to 100 and the yardage will stay the same while the tonnage updates.</p>
+  </fieldset>
+  <div class="calc-actions"><button type="button" class="btn calc-btn">Calculate</button></div>
+  <div class="calc-error" role="alert"></div>
+  <div class="results">
+    <h3>Your results</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-area">0</span></div><div class="k">sq ft covered</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuft">0</span></div><div class="k">cubic feet</div></div>
+      <div class="result-box highlight"><div class="v"><span class="r-cuyd">0</span></div><div class="k">cubic yards</div></div>
+      <div class="result-box"><div class="v"><span class="r-tons">0</span></div><div class="k">tons (approx. weight)</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Recommended order — includes 10% extra for settling &amp; spills</h3>
+    <div class="result-grid">
+      <div class="result-box highlight"><div class="v"><span class="r-rec-cuyd">0</span></div><div class="k">cubic yards to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-tons">0</span></div><div class="k">tons to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Copy-ready shopping list</h3>
+    <textarea class="shop-list" readonly aria-label="Shopping list"></textarea>
+    <p><button type="button" class="btn secondary copy-btn">Copy shopping list</button><span class="copy-note"></span></p>
+  </div>
+</section>
+
+  <section>
+    <h2>How to calculate lawn topdressing</h2>
+    <p>Topdressing means spreading a thin layer of compost, soil or sand over an established lawn to feed the soil, smooth out minor bumps and help seed germinate. The layer is deliberately thin — <strong>¼ inch is the standard pass, ½ inch is the maximum</strong> grass can grow through without being smothered — so the volumes are smaller than people expect: one cubic yard covers about <strong>1,296 sq ft at ¼ inch</strong> and 648 sq ft at ½ inch. The formula is the usual one, volume = area × depth ÷ 27, and this calculator defaults to a 5,000 sq ft lawn at ¼ inch so you can see a typical order size before entering your own numbers.</p>
+    <p>Getting the area right matters more than decimal places. Measure the lawn as rectangles and circles and subtract the house, driveway, beds and paths — topdressing only goes on grass. If you are seeding at the same time, the common sequence is: mow short, core-aerate if the soil is compacted, spread seed, then topdress at ¼ inch and rake it in so the material falls into the aeration holes and covers the seed. Water afterwards; the layer should be thin enough that grass blades still poke through everywhere — if you cannot see green, it is too thick in that spot.</p>
+    <p>Material choice changes the density, not the volume. <strong>Compost</strong> (40 lb/cu ft here) is the default recommendation for most lawns because it feeds soil biology and holds moisture around seed. <strong>Sand</strong> is used for levelling on intensively managed turf, especially warm-season lawns, but it adds no nutrition and weighs about 1.35 tons per yard — set the density field to 100 if you go that route. <strong>Topsoil or a 50/50 mix</strong> sits between the two for filling shallow depressions. Because topdressing is repeated — many lawns get a pass every year or two — the bag-versus-bulk crossover arrives quickly: over about 2 yards, delivery wins, which the bulk vs. bagged calculator can confirm with local prices.</p>
+  </section>
+  <section class="example">
+    <h3>Worked example: a 5,000 sq ft lawn (50 ft × 100 ft) at ¼ inch</h3>
+    <p>A 50 ft × 100 ft lawn is 5,000 sq ft. A ¼-inch layer is 0.0208 ft, so the volume is 5,000 × 0.0208 = 104.17 cubic feet, or <strong>3.86 cubic yards</strong> of compost. At 40 lb per cubic foot that weighs about 4,167 lb, or <strong>2.08 tons</strong>. In bags it is 70 of the 1.5 cu ft size — manageable, but already close to bulk-delivery territory. With the 10% buffer for uneven spreading, the recommended order is <strong>4.24 cubic yards</strong>. At ½ inch instead, double everything: about 7.72 cubic yards.</p>
+  </section>
+  <section>
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Spreading too thick.</strong> More than ½ inch in one pass smothers grass instead of feeding it. Two thin passes a few weeks apart beat one heavy pass every time.</li>
+      <li><strong>Measuring the lot instead of the lawn.</strong> The house, driveway, patio and beds are not getting topdressed. Including them inflates the order by the size of everything that is not grass — often 30% or more.</li>
+      <li><strong>Topdressing with raw or hot compost.</strong> Unfinished compost can burn turf and import weed seeds. Use finished, screened compost that smells earthy, not sour or ammonia-like.</li>
+      <li><strong>Skipping the rake-in.</strong> Material left sitting on top in clumps does nothing for the soil and shades the grass. Rake or drag it so it falls to the soil surface and the blades show through.</li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>How much topdressing do I need per 1,000 sq ft?</h3>
+    <p>At ¼ inch deep, about 0.77 cubic yards per 1,000 sq ft; at ½ inch, about 1.54 cubic yards. A full cubic yard covers roughly 1,296 sq ft at ¼ inch or 648 sq ft at ½ inch.</p>
+    <h3>How deep should lawn topdressing be?</h3>
+    <p>¼ inch is the standard single pass and the safest depth over seed; ½ inch is the practical maximum the grass can grow through. For levelling deeper hollows, build up in several ¼-inch passes across the season rather than one thick layer.</p>
+    <h3>Is compost or sand better for topdressing?</h3>
+    <p>Compost for most lawns: it feeds the soil and helps seed. Sand is for levelling firm, intensively managed turf and adds no nutrition. Many gardeners use a compost–soil mix for shallow depressions. The volume is identical either way — only the weight changes (sand is about 2.5× heavier per yard).</p>
+    <h3>When is the best time to topdress a lawn?</h3>
+    <p>When the grass is actively growing and can recover quickly — early fall is ideal for cool-season lawns (and pairs with overseeding), late spring for warm-season lawns. Avoid topdressing stressed, dormant or waterlogged turf.</p>
+    <h3>Can I topdress without aerating?</h3>
+    <p>Yes — topdressing alone still improves the soil surface and seed contact. Core aeration first makes it work harder, because material falls into the holes and reaches the root zone, but it is an enhancer, not a requirement.</p>
+  </section>
+  <nav class="related">
+    <h2>Related calculators</h2>
+    <ul>
+      <li><a href="compost-calculator.html">Compost calculator</a></li>
+      <li><a href="topsoil-calculator.html">Topsoil calculator</a></li>
+      <li><a href="soil-calculator.html">Soil calculator</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 TheDirtCalc. Estimates only — confirm quantities with your supplier before ordering.</div>
+    <nav>
+      <a href="index.html">All calculators</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/calc.js"></script>
+
+</body>
+</html>

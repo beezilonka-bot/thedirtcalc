@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crushed Stone Calculator — Tons &amp; Yards for Driveways and Base | TheDirtCalc</title>
+<meta name="description" content="Free crushed stone calculator. Get tons and cubic yards for driveways, paver and shed bases, and French drains, with a guide to stone sizes like #57 and crusher run.">
+<link rel="canonical" href="https://beezilonka-bot.github.io/thedirtcalc/crushed-stone-calculator.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How many tons of crushed stone do I need?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Find the volume first (length \u00d7 width \u00d7 depth in feet \u00f7 27 for cubic yards), then multiply cubic feet by 100 lb and divide by 2,000. A 12 \u00d7 40 ft driveway at 4 inches deep works out to 160 cu ft \u2014 5.93 cubic yards, or 8.00 tons."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much does a cubic yard of crushed stone weigh?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "About 2,700 lb, or 1.35 tons, at the standard 100 lb per cubic foot average used here. Washed single-size stone can be a touch lighter; crusher run with fines is right at this figure once compacted."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What size crushed stone is best for a driveway?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A common build is a 4-inch base of large stone (around 2\u20133 inch, or #2) topped with #57 (about 1 inch, clean) or #411, which blends #57 with dust so it packs into a firm driving surface. On firm, flat ground a single 4-inch layer of #411 or crusher run is often enough."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between crushed stone and gravel?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Crushed stone is machine-broken, angular rock that interlocks and compacts; gravel in the decorative sense (pea gravel, river rock) is naturally rounded and stays loose. Use crushed stone anywhere vehicles, pavers or structures bear on it, and rounded stone where looks and drainage matter more than lock-up."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How deep should crushed stone be under pavers?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Typically 4\u20136 inches of compacted crusher run or 3/4\u2033 minus base, then a 1-inch bedding sand layer, then the pavers. Walkway patios sit at the 4-inch end; driveways and soft soils need 6 inches or more."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">The<span>Dirt</span>Calc</a>
+    <nav class="site-nav">
+      <a href="topsoil-calculator.html">Topsoil</a>
+      <a href="mulch-calculator.html">Mulch</a>
+      <a href="gravel-calculator.html">Gravel</a>
+      <a href="raised-bed-soil-calculator.html">Raised Beds</a>
+      <a href="bulk-vs-bagged-calculator.html">Bulk vs. Bagged</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Crushed Stone Calculator</h1>
+    <p class="lede">Driveways, shed and paver bases, French drains: enter the area and depth and get crushed stone in tons and cubic yards — the two units stone is actually sold in.</p>
+  </div>
+<section class="calc calc-root" data-mode="material" data-material-name="Crushed stone">
+  <div class="unit-toggle">
+    <span class="lbl">Units:</span>
+    <button type="button" class="unit-btn active" data-system="imperial">Feet / Inches</button>
+    <button type="button" class="unit-btn" data-system="metric">Meters / Centimeters</button>
+  </div>
+  <fieldset class="area" data-area>
+    <legend>Area 1</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="12">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="40">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="4">
+      </div>
+    </div>
+  </fieldset>
+  <label class="checkline"><input type="checkbox" class="add-area"> Add a second area (two beds, a patio plus a path, …)</label>
+  <fieldset class="area" data-area hidden>
+    <legend>Area 2</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="12">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="40">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="4">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="area">
+    <legend>Material density <span style="font-weight:400;font-size:.85rem">(adjust if your supplier quotes a different weight)</span></legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Density (lb per cu ft)</label>
+        <input class="d-lb" type="number" step="any" min="0" value="100">
+      </div>
+      <div class="field">
+        <label>Density (tons per cu yd)</label>
+        <input class="d-tons" type="number" step="any" min="0" value="1.350">
+      </div>
+    </div>
+    <p class="fineprint">Crushed stone averages about 100 lb per cubic foot — 1.35 tons per cubic yard — because the angular pieces pack tightly with little air between them. That is heavier than pea gravel (about 96 lb/cu ft) and river rock (about 90), which is why the general gravel calculator gives a range and this one commits to the crushed-stone figure. Washed, single-size stone runs slightly lighter than crusher run with its fines included.</p>
+  </fieldset>
+  <div class="calc-actions"><button type="button" class="btn calc-btn">Calculate</button></div>
+  <div class="calc-error" role="alert"></div>
+  <div class="results">
+    <h3>Your results</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-area">0</span></div><div class="k">sq ft covered</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuft">0</span></div><div class="k">cubic feet</div></div>
+      <div class="result-box highlight"><div class="v"><span class="r-cuyd">0</span></div><div class="k">cubic yards</div></div>
+      <div class="result-box"><div class="v"><span class="r-tons">0</span></div><div class="k">tons (approx. weight)</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Recommended order — includes 10% extra for settling &amp; spills</h3>
+    <div class="result-grid">
+      <div class="result-box highlight"><div class="v"><span class="r-rec-cuyd">0</span></div><div class="k">cubic yards to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-tons">0</span></div><div class="k">tons to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Copy-ready shopping list</h3>
+    <textarea class="shop-list" readonly aria-label="Shopping list"></textarea>
+    <p><button type="button" class="btn secondary copy-btn">Copy shopping list</button><span class="copy-note"></span></p>
+  </div>
+</section>
+
+  <section>
+    <h2>How to calculate crushed stone</h2>
+    <p>Crushed stone is quarried rock mechanically broken into angular pieces, and unlike the rounded stone in the gravel family it locks together when compacted — which is why it is the default material under driveways, pavers, sheds and slabs. The volume formula is the site standard: <strong>length × width × depth ÷ 27 = cubic yards</strong>, and at 100 lb per cubic foot each yard weighs about 1.35 tons. Most stone yards price by the ton, so the tonnage figure is the one to take to the supplier; the yardage is what to check against your truck or their delivery minimum.</p>
+    <p>Depth is a design decision, not a guess. A gravel driveway over firm ground is typically built as 4 inches of large base stone, sometimes with a 2–3 inch finer top layer — calculate each layer separately and add the results (the second-area option handles the common two-section driveway). A paver or shed base usually takes 4–6 inches of compacted crushed stone (often sold as crusher run, 3/4″ minus, or road base) beneath the bedding layer. A French drain trench is a volume problem in disguise: trench length × width × the stone-filled depth, minus a little for the pipe itself.</p>
+    <p>Stone size names are the other source of confusion. The numbers refer to a standard grading sieve series: <strong>#57</strong> is a clean, roughly 1-inch stone that drains freely and is the usual French drain and driveway-top choice; <strong>#411</strong> blends #57 with stone dust so it compacts — a good driveway surface; <strong>crusher run / 3/4″ minus</strong> includes fines and packs hardest, making it the base material. Clean stone does not compact much (it is already as tight as it gets once settled), while minus material shrinks about 10% under a plate compactor — the recommended order's 10% buffer covers that compaction and the inevitable spillage along the edges.</p>
+  </section>
+  <section class="example">
+    <h3>Worked example: a 12 ft × 40 ft driveway, 4 inches of crushed stone</h3>
+    <p>A 12 ft × 40 ft driveway is 480 sq ft. At 4 inches (0.33 ft) deep, the volume is 480 × 0.33 = 160 cubic feet, or <strong>5.93 cubic yards</strong>. At 100 lb per cubic foot, that is 16,000 lb — <strong>8.00 tons</strong> of stone, the number a stone yard will quote on. Bagged stone would take 107 of the 1.5 cu ft bags, which is why driveways are always a bulk order. With 10% added for compaction and edge spill, order <strong>6.52 cubic yards, about 8.80 tons</strong> — and most yards will happily round that to a 9-ton load.</p>
+  </section>
+  <section>
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Ordering rounded gravel for a driveway base.</strong> Pea gravel and river rock roll under tires and never lock. Driveways and bases need angular crushed stone; save the round stone for decorative, low-traffic areas.</li>
+      <li><strong>Calculating one blended depth for a layered build.</strong> A 4-inch base plus a 3-inch top layer is not a 7-inch layer of one product — they are different stones at different prices. Run each layer as its own area and add the results.</li>
+      <li><strong>Forgetting compaction on crusher run.</strong> Minus material with fines shrinks roughly 10% when compacted. Order the loose volume with the buffer, not the finished in-place volume, or the last corner of the base ends up thin.</li>
+      <li><strong>Ignoring delivery weight limits and placement.</strong> Eight tons is a real truck. Confirm the driver can reach the spot and that your surface can take the truck — a loaded stone truck on a weak asphalt drive or septic field is an expensive mistake.</li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>How many tons of crushed stone do I need?</h3>
+    <p>Find the volume first (length × width × depth in feet ÷ 27 for cubic yards), then multiply cubic feet by 100 lb and divide by 2,000. A 12 × 40 ft driveway at 4 inches deep works out to 160 cu ft — 5.93 cubic yards, or 8.00 tons.</p>
+    <h3>How much does a cubic yard of crushed stone weigh?</h3>
+    <p>About 2,700 lb, or 1.35 tons, at the standard 100 lb per cubic foot average used here. Washed single-size stone can be a touch lighter; crusher run with fines is right at this figure once compacted.</p>
+    <h3>What size crushed stone is best for a driveway?</h3>
+    <p>A common build is a 4-inch base of large stone (around 2–3 inch, or #2) topped with #57 (about 1 inch, clean) or #411, which blends #57 with dust so it packs into a firm driving surface. On firm, flat ground a single 4-inch layer of #411 or crusher run is often enough.</p>
+    <h3>What is the difference between crushed stone and gravel?</h3>
+    <p>Crushed stone is machine-broken, angular rock that interlocks and compacts; gravel in the decorative sense (pea gravel, river rock) is naturally rounded and stays loose. Use crushed stone anywhere vehicles, pavers or structures bear on it, and rounded stone where looks and drainage matter more than lock-up.</p>
+    <h3>How deep should crushed stone be under pavers?</h3>
+    <p>Typically 4–6 inches of compacted crusher run or 3/4″ minus base, then a 1-inch bedding sand layer, then the pavers. Walkway patios sit at the 4-inch end; driveways and soft soils need 6 inches or more.</p>
+  </section>
+  <nav class="related">
+    <h2>Related calculators</h2>
+    <ul>
+      <li><a href="gravel-calculator.html">Gravel calculator</a></li>
+      <li><a href="pea-gravel-calculator.html">Pea gravel calculator</a></li>
+      <li><a href="bulk-vs-bagged-calculator.html">Bulk vs. bagged calculator</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 TheDirtCalc. Estimates only — confirm quantities with your supplier before ordering.</div>
+    <nav>
+      <a href="index.html">All calculators</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/calc.js"></script>
+
+</body>
+</html>

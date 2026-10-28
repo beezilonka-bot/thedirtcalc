@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paver Sand Calculator — Bedding Sand &amp; Joint Sand | TheDirtCalc</title>
+<meta name="description" content="Free paver sand calculator with both layers covered: bedding sand under the pavers (tons and yards) and polymeric joint sand between them (50 lb bags).">
+<link rel="canonical" href="https://beezilonka-bot.github.io/thedirtcalc/paver-sand-calculator.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How much bedding sand do I need under pavers?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "One inch over the whole patio: area in sq ft \u00f7 12 = cubic feet. A 12 \u00d7 16 ft patio (192 sq ft) needs 16 cu ft, about 0.59 cubic yards or 0.80 tons. Order the recommended amount with the 10% buffer for screeding losses and edge spill."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much joint sand do I need?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It depends on paver size, joint width and paver thickness. For 4 \u00d7 8 in pavers with \u215b in joints at 2\u215c in thick, expect roughly one 50 lb bag per 45\u201355 sq ft of patio \u2014 a 192 sq ft patio takes about 4 bags. Use the joint sand calculator on this page for your exact format."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What kind of sand goes under pavers?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Coarse, washed concrete sand (sometimes labelled bedding sand) \u2014 angular grains that lock together. Not play sand, not beach sand, not fine masonry sand: those are too round and uniform, and the paver field will keep shifting on them."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I use regular sand instead of polymeric sand in the joints?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "You can \u2014 plain jointing sand is cheaper and is what older patios used \u2014 but it washes out, blows away and grows weeds, so it needs topping up regularly. Polymeric sand sets after misting and resists all three, which is why it is the default recommendation for patios and walkways."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How thick should the gravel base under the sand be?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Typically 4\u20136 inches of compacted crushed stone (crusher run or 3/4\u2033 minus) under the 1-inch sand layer: 4 inches for a walkway patio on firm soil, 6 or more for driveways and soft or clay soils."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">The<span>Dirt</span>Calc</a>
+    <nav class="site-nav">
+      <a href="topsoil-calculator.html">Topsoil</a>
+      <a href="mulch-calculator.html">Mulch</a>
+      <a href="gravel-calculator.html">Gravel</a>
+      <a href="raised-bed-soil-calculator.html">Raised Beds</a>
+      <a href="bulk-vs-bagged-calculator.html">Bulk vs. Bagged</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Paver Sand Calculator</h1>
+    <p class="lede">A paver patio uses sand twice — a 1-inch bedding layer underneath, and joint sand swept in on top. The first calculator sizes the bedding layer; the second, below it, sizes the joint sand.</p>
+  </div>
+<section class="calc calc-root" data-mode="material" data-material-name="Paver bedding sand">
+  <div class="unit-toggle">
+    <span class="lbl">Units:</span>
+    <button type="button" class="unit-btn active" data-system="imperial">Feet / Inches</button>
+    <button type="button" class="unit-btn" data-system="metric">Meters / Centimeters</button>
+  </div>
+  <fieldset class="area" data-area>
+    <legend>Area 1</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="12">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="16">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="1">
+      </div>
+    </div>
+  </fieldset>
+  <label class="checkline"><input type="checkbox" class="add-area"> Add a second area (two beds, a patio plus a path, …)</label>
+  <fieldset class="area" data-area hidden>
+    <legend>Area 2</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="12">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="16">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="1">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="area">
+    <legend>Material density <span style="font-weight:400;font-size:.85rem">(adjust if your supplier quotes a different weight)</span></legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Density (lb per cu ft)</label>
+        <input class="d-lb" type="number" step="any" min="0" value="100">
+      </div>
+      <div class="field">
+        <label>Density (tons per cu yd)</label>
+        <input class="d-tons" type="number" step="any" min="0" value="1.350">
+      </div>
+    </div>
+    <p class="fineprint">Coarse, washed bedding sand (concrete sand) averages about 100 lb per cubic foot — 1.35 tons per cubic yard — the same as the sand in the general sand calculator. Do not substitute play sand or fine masonry sand for bedding: the grains are too round and uniform to lock, and the layer will keep shifting under the pavers.</p>
+  </fieldset>
+  <div class="calc-actions"><button type="button" class="btn calc-btn">Calculate</button></div>
+  <div class="calc-error" role="alert"></div>
+  <div class="results">
+    <h3>Your results</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-area">0</span></div><div class="k">sq ft covered</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuft">0</span></div><div class="k">cubic feet</div></div>
+      <div class="result-box highlight"><div class="v"><span class="r-cuyd">0</span></div><div class="k">cubic yards</div></div>
+      <div class="result-box"><div class="v"><span class="r-tons">0</span></div><div class="k">tons (approx. weight)</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Recommended order — includes 10% extra for settling &amp; spills</h3>
+    <div class="result-grid">
+      <div class="result-box highlight"><div class="v"><span class="r-rec-cuyd">0</span></div><div class="k">cubic yards to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-tons">0</span></div><div class="k">tons to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Copy-ready shopping list</h3>
+    <textarea class="shop-list" readonly aria-label="Shopping list"></textarea>
+    <p><button type="button" class="btn secondary copy-btn">Copy shopping list</button><span class="copy-note"></span></p>
+  </div>
+</section>
+
+<section class="calc">
+  <h2 style="margin-top:0">Joint sand calculator</h2>
+  <p class="fineprint" style="margin-bottom:1rem">Bedding sand goes <em>under</em> the pavers; joint sand goes <em>between</em> them. Enter the patio size and your paver format to estimate joint sand. It assumes the joints are filled to the full paver thickness and uses about 100 lb per cubic foot for dry jointing/polymeric sand. Results round up to whole 50 lb bags — the size polymeric sand is sold in.</p>
+  <div class="field-grid">
+    <div class="field">
+      <label>Patio length (ft)</label>
+      <input class="j-length" type="number" step="any" min="0" value="12">
+    </div>
+    <div class="field">
+      <label>Patio width (ft)</label>
+      <input class="j-width" type="number" step="any" min="0" value="16">
+    </div>
+    <div class="field">
+      <label>Paver size</label>
+      <select class="j-paver">
+        <option value="4x8" selected>Brick 4 × 8 in</option>
+        <option value="6x6">Square 6 × 6 in</option>
+        <option value="6x9">Rectangle 6 × 9 in</option>
+        <option value="12x12">Slab 12 × 12 in</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Joint width (in)</label>
+      <input class="j-joint" type="number" step="any" min="0" value="0.125">
+    </div>
+    <div class="field">
+      <label>Paver thickness (in)</label>
+      <input class="j-thick" type="number" step="any" min="0" value="2.375">
+    </div>
+  </div>
+  <div class="calc-actions"><button type="button" class="btn j-btn">Calculate joint sand</button></div>
+  <div class="calc-error j-error" role="alert"></div>
+  <div class="results j-results">
+    <h3>Joint sand needed</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="j-vol">0</span></div><div class="k">cubic feet of joint sand</div></div>
+      <div class="result-box"><div class="v"><span class="j-lb">0</span></div><div class="k">pounds (approx.)</div></div>
+      <div class="result-box highlight"><div class="v"><span class="j-bags">0</span></div><div class="k">bags × 50 lb</div></div>
+    </div>
+    <p class="fineprint">Sanity check: for standard 4 × 8 in pavers with ⅛ in joints, one 50 lb bag typically covers around 50 sq ft of patio — if your result is wildly different, re-check the joint width, which drives the answer more than any other input.</p>
+  </div>
+</section>
+
+  <section>
+    <h2>How much sand does a paver patio need?</h2>
+    <p>A paver installation is a sandwich, and sand appears in two different layers that are bought and calculated separately. The <strong>bedding layer</strong> is a bed of coarse sand screeded to exactly <strong>1 inch</strong> over the compacted gravel base; the pavers sit in it, and final compaction settles them about ⅜ inch into it. Its volume is patio area × 1 inch, which is what the calculator above computes at the standard sand density of 100 lb per cubic foot — use it for the tons or yards to order. The <strong>joint sand</strong> is swept over the finished surface and vibrated down into the gaps between pavers, locking the field together; that is the second calculator on this page.</p>
+    <p>Two rules protect the whole project. First, the bedding layer's thickness must be <strong>uniform, not generous</strong>: a 2-inch bedding layer feels safer and performs worse, because thick sand shifts and pavers rock and settle unevenly. Screed it at 1 inch, lay the pavers, and leave the fine-tuning to the compaction pass. Second, bedding sand goes over a properly built base — typically 4–6 inches of compacted crushed stone (the crushed stone calculator sizes that layer).</p>
+    <p>For <strong>joint sand</strong>, the amount depends on how much of your patio is gap. With standard 4 × 8 inch pavers and ⅛-inch joints, the joints are only about 4.5% of the surface — but they run the full 2⅜-inch thickness of the paver, so a mid-size patio still takes several 50 lb bags. Wider joints or thicker pavers push the number up quickly, which is why the joint calculator asks for paver size and joint width rather than guessing. Polymeric sand — joint sand with a binder that sets when misted — is the default choice for patios because it resists washout and weeds; it is sold in 50 lb bags, and the joint calculator reports whole bags.</p>
+  </section>
+  <section class="example">
+    <h3>Worked example: a 12 ft × 16 ft patio</h3>
+    <p>The patio is 192 sq ft. Bedding layer: 192 × (1 ÷ 12) = 16 cubic feet, or <strong>0.59 cubic yards</strong>, and at 100 lb per cubic foot that is <strong>0.80 tons</strong> of coarse bedding sand — the calculator above shows 22 of the 0.75 cu ft bags or 11 of the 1.5 cu ft bags. Joint sand: with 4 × 8 in pavers, ⅛ in joints and standard 2⅜ in thick pavers, the joints total about 1.72 cubic feet — roughly 172 lb, so <strong>4 × 50 lb bags</strong> of polymeric sand, or about one bag per 48 sq ft of patio.</p>
+  </section>
+  <section>
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Making the bedding layer thicker “for safety”.</strong> Bedding sand must be a uniform 1 inch. Extra depth does not add strength — it adds movement, and pavers settle unevenly into it.</li>
+      <li><strong>Using play sand or masonry sand as bedding.</strong> Fine, round, single-size grains roll instead of locking. Bedding wants coarse, angular, washed concrete sand; the wrong sand is the most common cause of a patio that will not stay flat.</li>
+      <li><strong>Skipping or skimping the joint sand.</strong> Empty joints let pavers creep, rock and chip at the edges, and invite weeds and ants. Sweep, compact, sweep again — the joints should end up full to just below the paver surface.</li>
+      <li><strong>Soaking polymeric sand instead of misting it.</strong> Drowning the surface washes the binder out of the joints and stains the pavers. Light misting passes, per the bag instructions, activate it without moving it.</li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>How much bedding sand do I need under pavers?</h3>
+    <p>One inch over the whole patio: area in sq ft ÷ 12 = cubic feet. A 12 × 16 ft patio (192 sq ft) needs 16 cu ft, about 0.59 cubic yards or 0.80 tons. Order the recommended amount with the 10% buffer for screeding losses and edge spill.</p>
+    <h3>How much joint sand do I need?</h3>
+    <p>It depends on paver size, joint width and paver thickness. For 4 × 8 in pavers with ⅛ in joints at 2⅜ in thick, expect roughly one 50 lb bag per 45–55 sq ft of patio — a 192 sq ft patio takes about 4 bags. Use the joint sand calculator on this page for your exact format.</p>
+    <h3>What kind of sand goes under pavers?</h3>
+    <p>Coarse, washed concrete sand (sometimes labelled bedding sand) — angular grains that lock together. Not play sand, not beach sand, not fine masonry sand: those are too round and uniform, and the paver field will keep shifting on them.</p>
+    <h3>Can I use regular sand instead of polymeric sand in the joints?</h3>
+    <p>You can — plain jointing sand is cheaper and is what older patios used — but it washes out, blows away and grows weeds, so it needs topping up regularly. Polymeric sand sets after misting and resists all three, which is why it is the default recommendation for patios and walkways.</p>
+    <h3>How thick should the gravel base under the sand be?</h3>
+    <p>Typically 4–6 inches of compacted crushed stone (crusher run or 3/4″ minus) under the 1-inch sand layer: 4 inches for a walkway patio on firm soil, 6 or more for driveways and soft or clay soils.</p>
+  </section>
+  <nav class="related">
+    <h2>Related calculators</h2>
+    <ul>
+      <li><a href="sand-calculator.html">Sand calculator</a></li>
+      <li><a href="crushed-stone-calculator.html">Crushed stone calculator</a></li>
+      <li><a href="bulk-vs-bagged-calculator.html">Bulk vs. bagged calculator</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 TheDirtCalc. Estimates only — confirm quantities with your supplier before ordering.</div>
+    <nav>
+      <a href="index.html">All calculators</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/calc.js"></script>
+
+<script>
+(function () {
+  'use strict';
+  var root = document.querySelector('.j-btn') ? document : null;
+  if (!root) return;
+  var btn = document.querySelector('.j-btn');
+  var err = document.querySelector('.j-error');
+  var box = document.querySelector('.j-results');
+  function num(sel) { var el = document.querySelector(sel); return el ? parseFloat(el.value) : NaN; }
+  function fmt2(n) { return n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  function calc() {
+    var L = num('.j-length'), W = num('.j-width');
+    var sel = document.querySelector('.j-paver');
+    var parts = sel.value.split('x');
+    var pw = parseFloat(parts[0]), pl = parseFloat(parts[1]);
+    var j = num('.j-joint'), t = num('.j-thick');
+    var bad = [];
+    if (isNaN(L) || L <= 0) bad.push('patio length');
+    if (isNaN(W) || W <= 0) bad.push('patio width');
+    if (isNaN(j) || j <= 0) bad.push('joint width');
+    if (isNaN(t) || t <= 0) bad.push('paver thickness');
+    if (bad.length) {
+      err.textContent = 'Please check: ' + bad.join(', ') + ' — each needs to be a number greater than 0.';
+      err.classList.add('show');
+      box.classList.remove('show');
+      return;
+    }
+    err.classList.remove('show');
+    var area = L * W; // sq ft
+    var jointFraction = 1 - (pl * pw) / ((pl + j) * (pw + j));
+    var volCuFt = area * jointFraction * (t / 12);
+    var pounds = volCuFt * 100; // dry jointing / polymeric sand ≈ 100 lb per cu ft
+    var bags = Math.ceil(pounds / 50);
+    document.querySelector('.j-vol').textContent = fmt2(volCuFt);
+    document.querySelector('.j-lb').textContent = fmt2(pounds);
+    document.querySelector('.j-bags').textContent = bags.toLocaleString('en-US');
+    box.classList.add('show');
+  }
+  btn.addEventListener('click', calc);
+  ['.j-length', '.j-width', '.j-joint', '.j-thick', '.j-paver'].forEach(function (sel) {
+    var el = document.querySelector(sel);
+    if (el) { el.addEventListener('input', calc); el.addEventListener('change', calc); }
+  });
+  calc();
+})();
+</script>
+
+</body>
+</html>

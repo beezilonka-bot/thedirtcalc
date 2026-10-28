@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playground Mulch Calculator — Safety Surfacing Yards &amp; Bags | TheDirtCalc</title>
+<meta name="description" content="Free playground mulch calculator. Work out how much engineered wood fiber or wood mulch you need at safe 9–12 inch depths, in cubic yards, tons and bags.">
+<link rel="canonical" href="https://beezilonka-bot.github.io/thedirtcalc/playground-mulch-calculator.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How deep should playground mulch be?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The commonly recommended planning range for loose-fill wood surfacing is 9\u201312 inches of maintained depth: install about 12 inches loose so it settles and compacts to around 9. These are the industry-standard figures associated with the CPSC Public Playground Safety Handbook \u2014 check the current handbook and your equipment's fall height for your exact requirement."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is engineered wood fiber?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Engineered wood fiber (EWF) is wood ground to a consistent, fibrous texture \u2014 not bark chunks \u2014 so it knits together into a cushioning mat that is also firm enough for wheelchairs when maintained. It is the most common loose-fill surface for public playgrounds and the material this calculator's 25 lb/cu ft density assumes."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How many bags of playground mulch cover a play area?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "At 12 inches deep, one cubic yard covers just 27 sq ft, and a 1.5 cu ft bag covers about 1.5 sq ft. Even a modest 200 sq ft home play area needs roughly 7.4 cubic yards \u2014 about 133 bags \u2014 which is why anything beyond a tiny swing set is usually a bulk order."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How often does playground mulch need topping up?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Expect to rake displaced material back regularly and to top up high-wear areas (under swings, at slide exits) during each season, with a broader top-up every 1\u20132 years as the wood decomposes and compacts. Depth checks with a ruler at the wear spots tell you when."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I use regular mulch on a playground?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "For a home swing set many families do, and the volume math is identical. For anything public, or where fall protection actually matters, use certified engineered wood fiber or playground-rated mulch: impact performance depends on the material's texture and consistency, not just its depth."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">The<span>Dirt</span>Calc</a>
+    <nav class="site-nav">
+      <a href="topsoil-calculator.html">Topsoil</a>
+      <a href="mulch-calculator.html">Mulch</a>
+      <a href="gravel-calculator.html">Gravel</a>
+      <a href="raised-bed-soil-calculator.html">Raised Beds</a>
+      <a href="bulk-vs-bagged-calculator.html">Bulk vs. Bagged</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Playground Mulch Calculator</h1>
+    <p class="lede">Safety surfacing is a depth problem before it is a volume problem. Enter the play area size and your target depth to get playground mulch in yards, tons and bags.</p>
+  </div>
+<section class="calc calc-root" data-mode="material" data-material-name="Playground mulch">
+  <div class="unit-toggle">
+    <span class="lbl">Units:</span>
+    <button type="button" class="unit-btn active" data-system="imperial">Feet / Inches</button>
+    <button type="button" class="unit-btn" data-system="metric">Meters / Centimeters</button>
+  </div>
+  <fieldset class="area" data-area>
+    <legend>Area 1</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="30">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="30">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="12">
+      </div>
+    </div>
+  </fieldset>
+  <label class="checkline"><input type="checkbox" class="add-area"> Add a second area (two beds, a patio plus a path, …)</label>
+  <fieldset class="area" data-area hidden>
+    <legend>Area 2</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="30">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="30">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="12">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="area">
+    <legend>Material density <span style="font-weight:400;font-size:.85rem">(adjust if your supplier quotes a different weight)</span></legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Density (lb per cu ft)</label>
+        <input class="d-lb" type="number" step="any" min="0" value="25">
+      </div>
+      <div class="field">
+        <label>Density (tons per cu yd)</label>
+        <input class="d-tons" type="number" step="any" min="0" value="0.338">
+      </div>
+    </div>
+    <p class="fineprint">Engineered wood fiber and shredded wood playground mulch average about 25 lb per cubic foot — roughly 0.34 tons, or 675 lb, per cubic yard — similar to ordinary wood mulch. Rubber mulch is a different product with its own coverage rates; if you are pricing rubber, use the manufacturer's pounds-per-square-foot figure instead of this density.</p>
+  </fieldset>
+  <div class="calc-actions"><button type="button" class="btn calc-btn">Calculate</button></div>
+  <div class="calc-error" role="alert"></div>
+  <div class="results">
+    <h3>Your results</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-area">0</span></div><div class="k">sq ft covered</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuft">0</span></div><div class="k">cubic feet</div></div>
+      <div class="result-box highlight"><div class="v"><span class="r-cuyd">0</span></div><div class="k">cubic yards</div></div>
+      <div class="result-box"><div class="v"><span class="r-tons">0</span></div><div class="k">tons (approx. weight)</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Recommended order — includes 10% extra for settling &amp; spills</h3>
+    <div class="result-grid">
+      <div class="result-box highlight"><div class="v"><span class="r-rec-cuyd">0</span></div><div class="k">cubic yards to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-tons">0</span></div><div class="k">tons to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Copy-ready shopping list</h3>
+    <textarea class="shop-list" readonly aria-label="Shopping list"></textarea>
+    <p><button type="button" class="btn secondary copy-btn">Copy shopping list</button><span class="copy-note"></span></p>
+  </div>
+</section>
+
+  <section>
+    <h2>How much playground mulch do you need?</h2>
+    <p>Playground surfacing exists to cushion falls, so the governing number is <strong>depth after compaction</strong>, not the depth on the delivery day. The widely used reference point in the US is the Consumer Product Safety Commission's Public Playground Safety Handbook, which treats loose-fill surfacing — engineered wood fiber (EWF) and wood mulch — as protective when it is maintained at depths on the order of <strong>9 to 12 inches</strong>: installing around 12 inches of loose material so it compacts and wears down to roughly 9 inches is the common practice behind those figures. Treat 9–12 inches as the industry-standard planning range used here, and always check the current CPSC guidance and your equipment manufacturer's stated fall height and surfacing requirements for your specific structure — taller equipment demands more protection, and no calculator overrides the manual that came with your climber.</p>
+    <p>The volume math is the site standard — <strong>length × width × depth ÷ 27 = cubic yards</strong> — but playgrounds run deep, so the yardage surprises people: at 12 inches deep, every 27 square feet of play area consumes a full cubic yard. Don't forget the <strong>use zones</strong>: safety guidance generally extends surfacing at least 6 ft beyond the equipment footprint in most directions. Calculate the whole surfaced area, not just the ground under the structure, and use the second-area option for border zones at a shallower depth if you are surfacing them differently.</p>
+    <p>Loose fill also <strong>migrates and decomposes</strong>. Plan on raking displaced material back regularly, topping up the wear spots under swings and slide exits during the season, and a fuller top-up every year or two to hold your target depth. The 10% buffer in the recommended order is a starting point; for a new installation over bare ground, ordering toward the deep end of the range is the cheaper mistake.</p>
+  </section>
+  <section class="example">
+    <h3>Worked example: a 30 ft × 30 ft play area, 12 inches of loose fill</h3>
+    <p>A 30 ft × 30 ft area is 900 sq ft. At 12 inches (1 ft) deep, the volume is 900 cubic feet, which is <strong>33.33 cubic yards</strong> of engineered wood fiber or wood playground mulch. At 25 lb per cubic foot that weighs about 22,500 lb, or <strong>11.25 tons</strong> — firmly a bulk-delivery project, since bagged mulch would take 600 of the 1.5 cu ft bags. With the 10% buffer for the settling that loose fill always does in its first weeks, order <strong>36.67 cubic yards</strong>, and expect to rake it level again after the first heavy use.</p>
+  </section>
+  <section>
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Calculating only the equipment footprint.</strong> Surfacing must extend into the use zones around and beyond the equipment — commonly at least 6 ft, and further in front of slide exits and in swing paths. A footprint-only order can come up a third short.</li>
+      <li><strong>Measuring success on delivery day.</strong> Twelve inches loose settles toward nine. If you install exactly 9 inches loose, you will be below the commonly recommended maintained depth within weeks.</li>
+      <li><strong>Using landscape mulch with big, chunky pieces — or any mulch with trash and soil in it.</strong> Playground surfacing should be engineered wood fiber or clean, fine wood mulch rated for play areas; dyed pallet-wood landscape mulch is a different product with different impact behaviour.</li>
+      <li><strong>Ignoring the wear spots.</strong> Under swings and at slide exits the fill displaces fast, exposing the ground where falls are most likely. Those spots need raking back and topping up far more often than the field as a whole.</li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>How deep should playground mulch be?</h3>
+    <p>The commonly recommended planning range for loose-fill wood surfacing is 9–12 inches of maintained depth: install about 12 inches loose so it settles and compacts to around 9. These are the industry-standard figures associated with the CPSC Public Playground Safety Handbook — check the current handbook and your equipment's fall height for your exact requirement.</p>
+    <h3>What is engineered wood fiber?</h3>
+    <p>Engineered wood fiber (EWF) is wood ground to a consistent, fibrous texture — not bark chunks — so it knits together into a cushioning mat that is also firm enough for wheelchairs when maintained. It is the most common loose-fill surface for public playgrounds and the material this calculator's 25 lb/cu ft density assumes.</p>
+    <h3>How many bags of playground mulch cover a play area?</h3>
+    <p>At 12 inches deep, one cubic yard covers just 27 sq ft, and a 1.5 cu ft bag covers about 1.5 sq ft. Even a modest 200 sq ft home play area needs roughly 7.4 cubic yards — about 134 bags — which is why anything beyond a tiny swing set is usually a bulk order.</p>
+    <h3>How often does playground mulch need topping up?</h3>
+    <p>Expect to rake displaced material back regularly and to top up high-wear areas (under swings, at slide exits) during each season, with a broader top-up every 1–2 years as the wood decomposes and compacts. Depth checks with a ruler at the wear spots tell you when.</p>
+    <h3>Can I use regular mulch on a playground?</h3>
+    <p>For a home swing set many families do, and the volume math is identical. For anything public, or where fall protection actually matters, use certified engineered wood fiber or playground-rated mulch: impact performance depends on the material's texture and consistency, not just its depth.</p>
+  </section>
+  <nav class="related">
+    <h2>Related calculators</h2>
+    <ul>
+      <li><a href="mulch-calculator.html">Mulch calculator</a></li>
+      <li><a href="sand-calculator.html">Sand calculator</a></li>
+      <li><a href="bulk-vs-bagged-calculator.html">Bulk vs. bagged calculator</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 TheDirtCalc. Estimates only — confirm quantities with your supplier before ordering.</div>
+    <nav>
+      <a href="index.html">All calculators</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/calc.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cubic Yard Calculator — Area &amp; Depth to Yards, Tons &amp; Bags | TheDirtCalc</title>
+<meta name="description" content="Free cubic yard calculator for soil, mulch, gravel, sand and stone. Enter length, width and depth to get cubic yards, tons and bag counts for any landscape material.">
+<link rel="canonical" href="https://beezilonka-bot.github.io/thedirtcalc/cubic-yard-calculator.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How do I convert square feet and depth to cubic yards?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Multiply length \u00d7 width in feet to get square feet, multiply by the depth in feet (inches \u00f7 12), then divide by 27. Example: 600 sq ft at 4 inches deep is 600 \u00d7 0.33 \u00f7 27 \u2248 7.41 cubic yards."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How many cubic feet are in a cubic yard?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "27 cubic feet. A cubic yard is a 3 ft \u00d7 3 ft \u00d7 3 ft cube, and 3 \u00d7 3 \u00d7 3 = 27. Bagged products are labelled in cubic feet, so divide your cubic footage by the bag size to get a bag count."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much does a cubic yard weigh?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It depends entirely on the material: roughly 675 lb for shredded mulch, about 1,100 lb for compost, about 2,025 lb for screened topsoil, and around 2,700 lb for crushed stone or sand. That is why this calculator asks you to pick a material instead of giving one generic weight."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How many bags equal a cubic yard?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "36 bags at 0.75 cu ft, 18 bags at 1.5 cu ft, or 54 bags at 0.5 cu ft (the common size for bagged stone). Past roughly 2 cubic yards, delivered bulk is usually cheaper and always less work."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Should I round my cubic yard result up or down?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Up, slightly. Loose material settles and compacts after watering and traffic, and suppliers sell in whole or half yards. This calculator's recommended order adds 10%, which lands most projects within one wheelbarrow of perfect."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">The<span>Dirt</span>Calc</a>
+    <nav class="site-nav">
+      <a href="topsoil-calculator.html">Topsoil</a>
+      <a href="mulch-calculator.html">Mulch</a>
+      <a href="gravel-calculator.html">Gravel</a>
+      <a href="raised-bed-soil-calculator.html">Raised Beds</a>
+      <a href="bulk-vs-bagged-calculator.html">Bulk vs. Bagged</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Cubic Yard Calculator</h1>
+    <p class="lede">The universal converter behind every material on this site: give it a length, width and depth, pick your material, and get cubic yards, tons and bag counts in one pass.</p>
+  </div>
+<section class="calc calc-root" data-mode="material" data-material-name="Landscape material">
+  <div class="unit-toggle">
+    <span class="lbl">Units:</span>
+    <button type="button" class="unit-btn active" data-system="imperial">Feet / Inches</button>
+    <button type="button" class="unit-btn" data-system="metric">Meters / Centimeters</button>
+  </div>
+  <fieldset class="area" data-area>
+    <legend>Area 1</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="20">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="30">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="4">
+      </div>
+    </div>
+  </fieldset>
+  <label class="checkline"><input type="checkbox" class="add-area"> Add a second area (two beds, a patio plus a path, …)</label>
+  <fieldset class="area" data-area hidden>
+    <legend>Area 2</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Shape</label>
+        <select class="a-shape">
+          <option value="rectangle" selected>Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="triangle">Triangle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><span class="a-length-label-text">Length</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-length" type="number" step="any" min="0" value="20">
+      </div>
+      <div class="field a-width-wrap">
+        <label><span class="a-width-label-text">Width</span> (<span class="u-len">ft</span>)</label>
+        <input class="a-width" type="number" step="any" min="0" value="30">
+      </div>
+      <div class="field">
+        <label>Depth (<span class="u-depth">in</span>)</label>
+        <input class="a-depth" type="number" step="any" min="0" value="4">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="area">
+    <legend>Material density <span style="font-weight:400;font-size:.85rem">(adjust if your supplier quotes a different weight)</span></legend>
+    <div class="field-grid">
+      <div class="field">
+        <label>Material <span class="hint">(sets the density below)</span></label>
+        <select class="stone-type">
+          <option value="topsoil" data-density="75" selected>Topsoil (screened)</option>
+          <option value="mulch" data-density="25">Mulch (shredded wood/bark)</option>
+          <option value="crushed" data-density="100">Crushed stone / gravel</option>
+          <option value="pea" data-density="96">Pea gravel</option>
+          <option value="river" data-density="90">River rock</option>
+          <option value="sand" data-density="100">Sand</option>
+          <option value="fill" data-density="90">Fill dirt</option>
+          <option value="compost" data-density="40">Compost</option>
+          <option value="bedmix" data-density="45">Raised bed mix</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Density (lb per cu ft)</label>
+        <input class="d-lb" type="number" step="any" min="0" value="75">
+      </div>
+      <div class="field">
+        <label>Density (tons per cu yd)</label>
+        <input class="d-tons" type="number" step="any" min="0" value="1.012">
+      </div>
+    </div>
+    <p class="fineprint">Density is what turns a volume into a weight, and it changes everything: a cubic yard of mulch weighs about 675 lb, a cubic yard of crushed stone about 2,700 lb. Picking a material above loads the density this site uses for that material's own calculator; you can also type your supplier's figure into either density field and the other will follow.</p>
+  </fieldset>
+  <div class="calc-actions"><button type="button" class="btn calc-btn">Calculate</button></div>
+  <div class="calc-error" role="alert"></div>
+  <div class="results">
+    <h3>Your results</h3>
+    <div class="result-grid">
+      <div class="result-box"><div class="v"><span class="r-area">0</span></div><div class="k">sq ft covered</div></div>
+      <div class="result-box"><div class="v"><span class="r-cuft">0</span></div><div class="k">cubic feet</div></div>
+      <div class="result-box highlight"><div class="v"><span class="r-cuyd">0</span></div><div class="k">cubic yards</div></div>
+      <div class="result-box"><div class="v"><span class="r-tons">0</span></div><div class="k">tons (approx. weight)</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Recommended order — includes 10% extra for settling &amp; spills</h3>
+    <div class="result-grid">
+      <div class="result-box highlight"><div class="v"><span class="r-rec-cuyd">0</span></div><div class="k">cubic yards to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-tons">0</span></div><div class="k">tons to order</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags075">0</span></div><div class="k">bags × 0.75 cu ft</div></div>
+      <div class="result-box"><div class="v"><span class="r-rec-bags15">0</span></div><div class="k">bags × 1.5 cu ft</div></div>
+    </div>
+    <h3>Copy-ready shopping list</h3>
+    <textarea class="shop-list" readonly aria-label="Shopping list"></textarea>
+    <p><button type="button" class="btn secondary copy-btn">Copy shopping list</button><span class="copy-note"></span></p>
+  </div>
+</section>
+
+  <section>
+    <h2>How cubic yards are calculated</h2>
+    <p>Every bulk landscape material — soil, mulch, gravel, sand, stone — is bought and sold by the <strong>cubic yard</strong>, a volume equal to a cube 3 ft on each side, or 27 cubic feet. The formula behind this calculator is the one every other calculator here is built on: <strong>cubic yards = (length in ft × width in ft × depth in ft) ÷ 27</strong>. Depth is the step people trip on: it is usually measured in inches, so divide inches by 12 first (4 inches = 0.33 ft). One yard at a given depth covers a fixed area, which makes a handy cross-check: 1 cubic yard covers 324 sq ft at 1 inch deep, 162 sq ft at 2 inches, 108 at 3 inches, 81 at 4 inches, 54 at 6 inches and 27 sq ft at a full foot deep.</p>
+    <p>Volume is only half the answer. Suppliers selling by the ton, and anyone hauling material in their own truck, also needs <strong>weight</strong> — and weight depends entirely on the material. Multiply cubic feet by the density in pounds per cubic foot and divide by 2,000 to get tons. The material picker above exists because there is no single “dirt weight”: the same 7.41 cubic yards that weigh 7.5 tons as topsoil would weigh barely 2.5 tons as mulch and over 10 tons as crushed stone.</p>
+    <p>Finally there are <strong>bags</strong>. Bagged material is labelled in cubic feet — commonly 0.75 or 1.5 cu ft for soil and mulch, 0.5 cu ft for stone — so bag count is simply cubic feet divided by bag size, rounded up. As the worked example shows, the bag count explodes fast, which is why bulk delivery usually wins past about 2 cubic yards; the bulk vs. bagged calculator on this site runs that price comparison with your local numbers.</p>
+  </section>
+  <section class="example">
+    <h3>Worked example: 20 ft × 30 ft area, 4 inches deep</h3>
+    <p>A 20 ft × 30 ft rectangle is 600 sq ft. Four inches of depth is 0.33 ft, so the volume is 600 × 0.33 = 200 cubic feet, and 200 ÷ 27 = <strong>7.41 cubic yards</strong>. With topsoil selected (75 lb per cubic foot) that volume weighs about 15,000 lb, or <strong>7.50 tons</strong>. In bags it works out to 267 of the 0.75 cu ft size or 134 of the 1.5 cu ft size — a clear case for a bulk delivery. Add the 10% buffer for settling and uneven ground and the recommended order is <strong>8.15 cubic yards</strong>. Switch the material to mulch and watch the same space drop to about 2.5 tons: the yardage never changes, only the weight does.</p>
+  </section>
+  <section>
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Entering depth in feet instead of inches.</strong> A “4” in the depth box means 4 inches here. Typing feet into an inch field (or the reverse on other sites) is the single most common cause of 12× over-orders.</li>
+      <li><strong>Using one density for every material.</strong> Treating mulch like stone overstates weight four-fold; treating stone like soil understates it by a third. Pick the actual material before quoting tonnage to a supplier or loading a trailer.</li>
+      <li><strong>Forgetting that a cubic yard is 27 cubic feet, not 9.</strong> Nine is square feet in a square yard — an area measure. Mixing the two shrinks your order to a third of what you need.</li>
+      <li><strong>Measuring a sloped or irregular area as one rectangle.</strong> Break odd shapes into rectangles, circles and triangles and add them up — this calculator has a second-area option for exactly that.</li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>How do I convert square feet and depth to cubic yards?</h3>
+    <p>Multiply length × width in feet to get square feet, multiply by the depth in feet (inches ÷ 12), then divide by 27. Example: 600 sq ft at 4 inches deep is 600 × 0.33 ÷ 27 ≈ 7.41 cubic yards.</p>
+    <h3>How many cubic feet are in a cubic yard?</h3>
+    <p>27 cubic feet. A cubic yard is a 3 ft × 3 ft × 3 ft cube, and 3 × 3 × 3 = 27. Bagged products are labelled in cubic feet, so divide your cubic footage by the bag size to get a bag count.</p>
+    <h3>How much does a cubic yard weigh?</h3>
+    <p>It depends entirely on the material: roughly 675 lb for shredded mulch, about 1,100 lb for compost, about 2,025 lb for screened topsoil, and around 2,700 lb for crushed stone or sand. That is why this calculator asks you to pick a material instead of giving one generic weight.</p>
+    <h3>How many bags equal a cubic yard?</h3>
+    <p>36 bags at 0.75 cu ft, 18 bags at 1.5 cu ft, or 54 bags at 0.5 cu ft (the common size for bagged stone). Past roughly 2 cubic yards, delivered bulk is usually cheaper and always less work.</p>
+    <h3>Should I round my cubic yard result up or down?</h3>
+    <p>Up, slightly. Loose material settles and compacts after watering and traffic, and suppliers sell in whole or half yards. This calculator's recommended order adds 10%, which lands most projects within one wheelbarrow of perfect.</p>
+  </section>
+  <nav class="related">
+    <h2>Related calculators</h2>
+    <ul>
+      <li><a href="topsoil-calculator.html">Topsoil calculator</a></li>
+      <li><a href="gravel-calculator.html">Gravel calculator</a></li>
+      <li><a href="bulk-vs-bagged-calculator.html">Bulk vs. bagged calculator</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 TheDirtCalc. Estimates only — confirm quantities with your supplier before ordering.</div>
+    <nav>
+      <a href="index.html">All calculators</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/calc.js"></script>
+
+</body>
+</html>
