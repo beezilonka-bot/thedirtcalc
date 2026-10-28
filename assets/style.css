@@ -118,6 +118,14 @@ fieldset.area legend{font-weight:700;padding:0 6px;font-size:.98rem}
 .fineprint{font-size:.85rem;color:var(--muted)}
 
 /* Content blocks */
+
+/* Quick answer (SEO/GEO summary block under each calculator) */
+.quick-answer{
+  background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:var(--radius);padding:16px 18px 6px;margin:0 0 26px;
+}
+.quick-answer h2{margin-top:0}
+.quick-answer .qa-main{font-size:1.02rem}
 .example{
   background:var(--accent-soft);border:1px solid var(--line);border-radius:var(--radius);
   padding:16px 18px 4px;margin:18px 0;

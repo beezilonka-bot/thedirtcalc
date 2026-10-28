@@ -1,0 +1,71 @@
+# TheDirtCalc — Landscape Material Calculators
+
+TheDirtCalc (https://beezilonka-bot.github.io/thedirtcalc/) is a free set of landscape material calculators for homeowners. Each calculator turns an area and a depth into the order quantities suppliers actually use — cubic yards, tons and bag counts — using a published-average density for each material and a standard 10% buffer for settling. No sign-up; calculations run in the browser.
+
+## Calculators
+
+- Topsoil Calculator: https://beezilonka-bot.github.io/thedirtcalc/topsoil-calculator.html — Cubic yards, tons and bags of topsoil for lawns and garden beds.
+- Mulch Calculator: https://beezilonka-bot.github.io/thedirtcalc/mulch-calculator.html — Cubic yards and bag counts of mulch for beds and tree rings.
+- Gravel Calculator: https://beezilonka-bot.github.io/thedirtcalc/gravel-calculator.html — Tons and cubic yards of gravel for driveways, paths and drainage, with density switched by stone type (crushed, pea, river).
+- Raised Bed Soil Calculator: https://beezilonka-bot.github.io/thedirtcalc/raised-bed-soil-calculator.html — Soil mix volume for 4x4, 4x8 and custom raised beds, by the bag or the cubic yard.
+- Sand Calculator: https://beezilonka-bot.github.io/thedirtcalc/sand-calculator.html — Tons and bags of sand for paver bases, pools and sandboxes.
+- Fill Dirt Calculator: https://beezilonka-bot.github.io/thedirtcalc/fill-dirt-calculator.html — Cubic yards and tons of fill dirt for leveling and raising grade.
+- Compost Calculator: https://beezilonka-bot.github.io/thedirtcalc/compost-calculator.html — Compost volume for top-dressing and amending beds and lawns.
+- Pea Gravel Calculator: https://beezilonka-bot.github.io/thedirtcalc/pea-gravel-calculator.html — Tons and bags of pea gravel for patios and walkways.
+- River Rock Calculator: https://beezilonka-bot.github.io/thedirtcalc/river-rock-calculator.html — Tons of river rock for decorative beds and dry creek beds.
+- Bulk vs. Bagged Calculator: https://beezilonka-bot.github.io/thedirtcalc/bulk-vs-bagged-calculator.html — Compares the total cost of delivered bulk material (per cubic yard) against bagged material for the same job, both priced on the waste-adjusted volume.
+- Cubic Yard Calculator: https://beezilonka-bot.github.io/thedirtcalc/cubic-yard-calculator.html — General calculator: area and depth to cubic yards, tons and bags for any of nine built-in materials.
+- Dirt Calculator: https://beezilonka-bot.github.io/thedirtcalc/dirt-calculator.html — Cubic yards and tons of dirt for backfill, filling holes and leveling.
+- Soil Calculator: https://beezilonka-bot.github.io/thedirtcalc/soil-calculator.html — How much soil (cubic yards, tons, bags) for beds, gardens and lawns.
+- Crushed Stone Calculator: https://beezilonka-bot.github.io/thedirtcalc/crushed-stone-calculator.html — Tons and cubic yards of crushed stone for driveways, bases and drains.
+- Playground Mulch Calculator: https://beezilonka-bot.github.io/thedirtcalc/playground-mulch-calculator.html — Loose-fill safety surfacing (engineered wood fiber / playground mulch) at 9-12 inch depths, in cubic yards and bags.
+- Lawn Topdressing Calculator: https://beezilonka-bot.github.io/thedirtcalc/lawn-topdressing-calculator.html — Compost topdressing at 1/4 to 1/2 inch over lawns of any size.
+- Paver Sand Calculator: https://beezilonka-bot.github.io/thedirtcalc/paver-sand-calculator.html — Bedding sand (1 inch layer, by the yard or bag) plus polymeric joint sand (50 lb bags) for paver patios.
+- Garden Soil Calculator: https://beezilonka-bot.github.io/thedirtcalc/garden-soil-calculator.html — Garden soil blend for in-ground vegetable beds and rows (added-layer depth, not full frame volume).
+
+## Core facts
+
+### The formula
+
+- Volume = area × depth. Rectangle area = length × width; circle area = pi × (diameter / 2)^2; triangle area = base × height / 2.
+- Depth must be in feet before multiplying: inches / 12 = feet (4 inches = 0.333 ft).
+
+### Unit conversions
+
+- 1 cubic yard = 27 cubic feet. Cubic yards = cubic feet / 27.
+- 1 ton = 2,000 lb. Tons = cubic feet × density (lb per cubic foot) / 2,000.
+- Weight of one cubic yard in tons = density × 27 / 2,000.
+
+### Material densities used by the calculators
+
+Mid-points of ranges commonly published by landscape suppliers and university extension guidance. Moisture and local material shift true weight, and every calculator shows its density and lets the user change it.
+
+- Topsoil (screened): 75 lb/cu ft = 1.01 tons per cubic yard (published range ~70-80 lb/cu ft; about 1 ton per yard is the standard rule of thumb)
+- Mulch (shredded wood/bark): 25 lb/cu ft = 0.34 tons per cubic yard (range ~20-30)
+- Gravel, crushed stone: 100 lb/cu ft = 1.35 tons per cubic yard (range ~95-105)
+- Gravel, pea gravel: 96 lb/cu ft = 1.30 tons per cubic yard (range ~92-100)
+- Gravel, river rock: 90 lb/cu ft = 1.22 tons per cubic yard (range ~85-95)
+- Sand (dry): 100 lb/cu ft = 1.35 tons per cubic yard (range ~95-105; wet sand runs 15-25% heavier)
+- Fill dirt: 90 lb/cu ft = 1.22 tons per cubic yard (range ~85-100)
+- Compost (finished): 40 lb/cu ft = 0.54 tons per cubic yard (range ~35-45)
+- Raised bed mix (topsoil/compost blend): 45 lb/cu ft = 0.61 tons per cubic yard (range ~40-50)
+
+### Bag sizes
+
+- Standard bag sizes calculated: 0.75 cu ft and 1.5 cu ft.
+- One cubic yard = 36 bags of 0.75 cu ft, or 18 bags of 1.5 cu ft. Bag counts are always rounded up.
+
+### The 10% buffer
+
+- Every calculator's "recommended order" multiplies the calculated volume by 1.10. The extra 10% covers settling and compaction after watering and traffic, uneven ground, and spills. It is the difference between finishing a project and making a second trip.
+
+### Reference examples (verified against the calculators)
+
+- Topsoil, 20 ft x 30 ft at 4 inches deep: 200 cu ft = 7.41 cubic yards = 7.50 tons = 134 bags of 1.5 cu ft; recommended order with buffer 8.15 cubic yards.
+- Mulch, circle 12 ft diameter at 3 inches deep: 28.27 cu ft = 1.05 cubic yards = 0.35 tons.
+- Crushed stone, 12 ft x 40 ft driveway at 4 inches deep: 160 cu ft = 5.93 cubic yards = 8.00 tons; recommended order with buffer 6.52 cubic yards (8.80 tons).
+
+## Notes
+
+- All figures are estimates; confirm quantities with your supplier before ordering.
+- Site pages: About https://beezilonka-bot.github.io/thedirtcalc/about.html - Privacy https://beezilonka-bot.github.io/thedirtcalc/privacy.html
